@@ -2,7 +2,10 @@
     <div>
         <div class="question" v-for="q in questions" v-if="q.id === questId">
             <h3 v-html="q.text"></h3>
-            <input v-for="answer in q.answers" type="button" :value="answer.text" @click="storeEffects(answer.effects)">
+            <div class="answer" v-for="answer in q.answers">
+                <input type="button"  @click="storeEffects(answer.effects)" name="answer">
+                <label for="answer" v-html="answer.text"></label>
+            </div>
         </div>
         <button class="validation" @click="nextQuestion" :disabled="effect === null">Validate</button>
     </div>
@@ -67,6 +70,10 @@ import { earthViability, populationViability } from './viabilities.js'
         }
     }
 </script>
-<style>
-    
+<style scoped>
+    input {
+        width: 10px;
+        height: 10px;
+        background: white;
+    }
 </style>

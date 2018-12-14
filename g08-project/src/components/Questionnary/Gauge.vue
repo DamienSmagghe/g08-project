@@ -15,7 +15,7 @@ export default {
 </script>
 <style scoped>
     .gauge {
-        width: 800px;
+        width: 400px;
         height: 20px;
         background: blue;
         transform-origin: left;
