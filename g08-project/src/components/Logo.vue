@@ -1,7 +1,7 @@
 <template>
     <div class="logo__container">
         <img src="../assets/images/logo2.svg" alt="Flat planet logo">
-        <h1>Website name</h1>
+        <h1>Terra-Star</h1>
     </div>
 </template>
 <script>
@@ -24,8 +24,11 @@ export default {
         height: 4rem;
     }
     .logo__container h1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: normal;
+        font-family: 'Fjalla', 'helvetica', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
     }
     .logo__container img {
         margin-right: 15px;

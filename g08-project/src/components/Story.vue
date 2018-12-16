@@ -1,7 +1,7 @@
 <template>
     <div class="story">
             <h3 class="chapter__title">{{chapter.title}}</h3>
-            <div class="paragraph">
+            <div class="paragraph cornered">
             <p> {{chapter.content}}</p>
             <span></span>
         </div>
@@ -47,52 +47,5 @@
     .paragraph {
         position: relative;
         padding: 20px;
-    }
-    .paragraph:before {
-        display: block;
-        content: "";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-top: 2px solid white;
-        border-left: 2px solid white;
-    }
-    
-    .paragraph:after {
-        display: block;
-        content: "";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-top: 2px solid white;
-        border-right: 2px solid white;
-    }
-    
-    .paragraph span:before {
-        display: block;
-        content: "";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        border-bottom: 2px solid white;
-        border-left: 2px solid white;
-    }
-    
-    .paragraph span:after {
-        display: block;
-        content: "";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        border-bottom: 2px solid white;
-        border-right: 2px solid white;
     }
 </style>

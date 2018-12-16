@@ -8,6 +8,7 @@
             <story v-for="chap in chapterContent" v-bind:key="chap.id" :chapter-data="chap" v-if="chapter === chap.id + 2"></story>
         </transition-group>
         <h3 class="earth" v-if="chapter === 1">Eart<span>h</span></h3>
+        <input v-if="chapter === 4" v-model="planetName" type="text" maxlength="12" placeholder="Name Your Planet" class="planet__name" @keypress.13="shouldRun" required>
         <launch v-if="chapter === 1" v-on:launch="iterateChapter"></launch>
     </div>
 </template>
@@ -36,18 +37,25 @@
             return {
                 chapter: 1,
                 chapterContent: storyTelling,
-                justChanged: false
+                justChanged: false,
+                planetName: ''
             }
         },
         methods: {
             iterateChapter() {
                 this.chapter++
             },
+            shouldRun() {
+                if (this.planetName.length > 2)
+                {
+                    this.$emit('run')
+                }
+            },
             scrollChapter() {
-                if (this.chapter > 1 && this.chapter <= 4 && this.justChanged === false) {
+                if (this.chapter > 1 && this.chapter < 4 && this.justChanged === false) {
                     this.iterateChapter()
                     this.justChanged = true
-                    if (this.chapter < 4) {
+                    if (this.chapter <= 4) {
                         window.setTimeout(() => {
                             this.justChanged = false
                         }, 2000)
@@ -59,21 +67,14 @@
 </script>
 
 <style>
-    .landing {
+    .landing .background {
+        min-height: 100%;
+        min-width: 1024px;
+        width: 100%;
+        height: auto;
         position: fixed;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
         top: 0;
         left: 0;
-        bottom: 0;
-        right: 0;
-    }
-    
-    .landing .background {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         filter: brightness(80%)
     }
     
@@ -90,7 +91,12 @@
         font-weight: normal;
         letter-spacing: 4rem;
     }
-    
+    .planet__name {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .landing .earth span {
         letter-spacing: 0;
     }
@@ -101,8 +107,7 @@
     }
     
     .fade-enter,
-    .fade-leave-to    
-    {
+    .fade-leave-to {
         opacity: 0;
     }
 </style>
