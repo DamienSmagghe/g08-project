@@ -52,4 +52,9 @@ export default {
      height: 40px;
      background: white;
  }
+ @media screen and (max-width: 660px){
+     .social__container {
+         display: none;
+     }
+ }
 </style>

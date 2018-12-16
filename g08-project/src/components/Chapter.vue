@@ -22,6 +22,7 @@ export default {
 }
 </script>
 <style>
+
 .chapter__container {
     position: absolute;
     top: 50%;
@@ -76,5 +77,16 @@ export default {
 .chapter__container .row .dot-3 { transform: translate(-50%, 180px) }
 .chapter__container .row .dot-4 { transform: translate(-50%, 260px) }
 
+@media screen and (max-width: 660px) {
+    .chapter__container {
+        bottom: -40%;
+        left: 50%;
+        transform: rotate(-90deg) translate(0, 20%);
+    }
+    .chapter__container .row .dot.current::after {
+        transform: rotate(90deg);
+        left: 0;
+    }
+}
 </style>
 

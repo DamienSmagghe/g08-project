@@ -74,4 +74,10 @@
     .row .dot.current::before {
         transform: scale(1);
     }
+    @media screen and (max-width: 960px) {
+        .era__container {
+            display: none;
+        }
+        
+    }
 </style>

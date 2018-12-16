@@ -32,7 +32,6 @@ export default {
 <style scoped>
 .gauge__container {
     width: 20%;
-    height: 20%;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -69,6 +68,12 @@ export default {
         transition-delay: 0.3s;
         transition-duration: 0.3s;
         transition-timing-function: ease-out;
+    }
+    @media screen and (max-width: 960px) {
+        .gauge__container {
+            width: 100%;
+        }
+        
     }
 </style>
 

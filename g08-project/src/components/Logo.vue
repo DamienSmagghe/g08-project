@@ -33,5 +33,14 @@ export default {
     .logo__container img {
         margin-right: 15px;
     }
+    @media screen and (max-width: 660px) {
+        .logo__container h1 {
+            font-size: 0.8rem;
+        }
+        .logo__container img {
+        width: 2rem;
+        height: 2rem;
+    }
+    }
 </style>
 

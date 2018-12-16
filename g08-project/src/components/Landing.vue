@@ -66,6 +66,10 @@
 </script>
 
 <style>
+.landing {
+    width: 100vw;
+    height: 100vh;
+}
     .background {
         width: 100%;
         min-height: 100%;
@@ -110,6 +114,12 @@
     .fade-enter,
     .fade-leave-to {
         opacity: 0;
+    }
+    @media screen and (max-width: 660px) {
+        .landing .earth {
+            font-size: 3rem;
+            letter-spacing: 2.5rem;
+        }
     }
 </style>
 

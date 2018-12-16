@@ -142,4 +142,12 @@
         font-size: 1.5rem;
         margin: 10px auto;
     }
+    @media screen and (max-width: 960px) {
+        .questions {
+            width: 100%;
+            height: 35%;
+            margin: 20px;
+        }
+        
+    }
 </style>

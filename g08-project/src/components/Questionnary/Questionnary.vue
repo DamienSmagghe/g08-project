@@ -89,4 +89,13 @@ export default {
         width: 100vw;
         height: 100vh;
     }
+    @media screen and (max-width: 960px) {
+        .planet-name {
+            display: none;
+        }
+        .game {
+            flex-direction: column;
+        }
+        
+    }
 </style>
