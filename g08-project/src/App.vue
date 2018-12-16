@@ -31,8 +31,8 @@
       }
     },
     methods: {
-      game() {
-        this.planetName = Landing.planetName
+      game(value) {
+        this.planetName = value
         this.gameLaunch = true
       }
     }

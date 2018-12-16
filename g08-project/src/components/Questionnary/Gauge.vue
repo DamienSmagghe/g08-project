@@ -46,7 +46,7 @@ export default {
     margin: 10px;
 }
 .gauge__content .gauge__info h4 {
-    margin: 0 10px;
+    margin: 0 10px 5px 10px;
 }
 .gauge__info span {
     color: white;

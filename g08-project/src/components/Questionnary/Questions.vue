@@ -83,14 +83,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 20%;
-        height: 70%;
+        width: 25%;
+        height: 65%;
         text-align: center;
         padding: 20px;
         margin: 20px;
     }
     .question, input {
         max-width: 100%;
+        white-space: normal;
     }
     .answer .current {
         background: #5CA2FF;    

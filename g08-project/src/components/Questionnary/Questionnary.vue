@@ -1,7 +1,8 @@
 <template>
     <div class="questionnary">
         <div class="game">
-            <h3 class="planet-name" :v-html="planetName"></h3>
+            <img src="../../assets/images/bg2.png" alt="Cosmos" class="background">
+            <h3 class="planet-name">{{planetName}}</h3>
             <gauges v-bind:earth-viability="dataEarthViability" :population-viability="dataPopulationViability"></gauges>
             <div class="planet__container"></div>
             <questions v-bind:questions="allQuestions" v-bind:earth-viability="dataEarthViability" v-bind:population-viability="dataPopulationViability" v-on:updateViabilities="updateGauge"></questions>
@@ -64,9 +65,17 @@ export default {
 }
 </script>
 <style>
-    body {
-        background: black;
-    }
+.planet-name {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 45%;
+    transform: translateX(-20%);
+    text-transform: uppercase;
+    font-family: 'Fjalla', 'helvetica', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+}
     .game {
         display: flex;
         justify-content: space-between;

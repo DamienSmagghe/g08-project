@@ -46,9 +46,8 @@
                 this.chapter++
             },
             shouldRun() {
-                if (this.planetName.length > 2)
-                {
-                    this.$emit('run')
+                if (this.planetName.length > 2) {
+                    this.$emit('run', this.planetName)
                 }
             },
             scrollChapter() {
@@ -67,14 +66,14 @@
 </script>
 
 <style>
-    .landing .background {
-        min-height: 100%;
-        min-width: 1024px;
+    .background {
         width: 100%;
+        min-height: 100%;
         height: auto;
         position: fixed;
         top: 0;
         left: 0;
+        object-fit: cover;
         filter: brightness(80%)
     }
     
@@ -91,12 +90,14 @@
         font-weight: normal;
         letter-spacing: 4rem;
     }
+    
     .planet__name {
         position: absolute;
         top: 80%;
         left: 50%;
         transform: translateX(-50%);
     }
+    
     .landing .earth span {
         letter-spacing: 0;
     }

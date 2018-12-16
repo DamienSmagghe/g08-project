@@ -5,6 +5,7 @@
             <p> {{chapter.content}}</p>
             <span></span>
         </div>
+        <audio src="../assets/sounds/story1.mp3" type="audio/mp3" autoplay></audio>
     </div>
 </template>
 
@@ -13,6 +14,11 @@
         name: 'story',
         props: {
             chapterData: Object
+        },
+        data() {
+            return {
+                // voiceSource: require(this.chapter.sound)
+            }
         },
         computed: {
             chapter() {
