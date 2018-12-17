@@ -21,7 +21,7 @@
   import Logo from './components/Logo.vue'
   import Sounds from './components/Sounds.vue'
   import EndPage from './components/EndPage.vue'
-  
+
   export default {
     name: 'App',
     components: {
@@ -94,53 +94,54 @@
   a {
     color: inherit;
   }
+  
   .cornered:before {
-        display: block;
-        content: "";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-top: 2px solid white;
-        border-left: 2px solid white;
-    }
-    
-    .cornered:after {
-        display: block;
-        content: "";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-top: 2px solid white;
-        border-right: 2px solid white;
-    }
-    
-    .cornered span:before {
-        display: block;
-        content: "";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        border-bottom: 2px solid white;
-        border-left: 2px solid white;
-    }
-    
-    .cornered span:after {
-        display: block;
-        content: "";
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        border-bottom: 2px solid white;
-        border-right: 2px solid white;
-    }
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+  }
+  
+  .cornered:after {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  }
+  
+  .cornered span:before {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+  }
+  
+  .cornered span:after {
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+  }
 </style>
 
 

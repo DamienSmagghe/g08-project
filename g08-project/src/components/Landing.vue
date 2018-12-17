@@ -50,9 +50,14 @@
                     this.$emit('run', this.planetName)
                 }
             },
-            scrollChapter() {
+            scrollChapter(_event) {
                 if (this.chapter > 1 && this.chapter < 4 && this.justChanged === false) {
-                    this.iterateChapter()
+                    if (_event.deltaY < 0) {
+                        this.chapter--
+                    }
+                    else if (_event.deltaY > 0) {
+                        this.iterateChapter()
+                    }
                     this.justChanged = true
                     if (this.chapter <= 4) {
                         window.setTimeout(() => {

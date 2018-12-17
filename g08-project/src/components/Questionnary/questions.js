@@ -21,6 +21,7 @@ export const questions = [
             },
             {
                 text: 'Make all our men work on a voluntary basis',
+                icon: 'user-secret',
                 effects: [{
                         themeAffected: 3,
                         value: -0.05
@@ -37,6 +38,7 @@ export const questions = [
             },
             {
                 text: 'Fostering investment in the education of our young people',
+                icon: 'user-secret',
                 effects: [{
                         themeAffected: 7,
                         value: 0.1
