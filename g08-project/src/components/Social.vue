@@ -3,17 +3,17 @@
         <div class="row"></div>
         <ul>
             <li>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/terrastar.hetic/" target="_blank">
                     <img src="../assets/images/instagram.svg" alt="Instagram Logo">
                 </a>
             </li>
             <li>
-                <a href="#" target="_blank">
+                <a href="https://www.facebook.com/Terrastar-585312258575578/" target="_blank">
                     <img src="../assets/images/facebook.svg" alt="Facebook Logo">
                 </a>
             </li>
             <li>
-                <a href="#" target="_blank">
+                <a href="https://twitter.com/TerrastarH" target="_blank">
                     <img src="../assets/images/twitter.svg" alt="Twitter Logo">
                 </a>
             </li>
