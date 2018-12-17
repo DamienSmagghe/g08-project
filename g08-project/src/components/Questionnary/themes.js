@@ -1,19 +1,19 @@
 export const affectThemes =
 [
-    {name: 'economy', value: 1},
-    {name: 'education', value: 1},
-    {name: 'comfort', value: 1},
-    {name: 'health', value: 1},
-    {name: 'industry', value: 1},
-    {name: 'infrastructures', value: 1},
-    {name: 'society', value: 1},
-    {name: 'innovation', value: 1},
+    {name: 'Economy', value: 1},
+    {name: 'Education', value: 1},
+    {name: 'Comfort', value: 1},
+    {name: 'Health', value: 1},
+    {name: 'Industry', value: 1},
+    {name: 'Infrastructures', value: 1},
+    {name: 'Society', value: 1},
+    {name: 'Innovation', value: 1},
 
-    {name: 'pollution', value: 1},
-    {name: 'energy', value: 1},
-    {name: 'demography', value: 1},
-    {name: 'waterQuality', value: 1},
-    {name: 'faunaFlora', value: 1},
-    {name: 'ressources', value: 1},
-    {name: 'space', value: 1}
+    {name: 'Pollution', value: 1},
+    {name: 'Energy', value: 1},
+    {name: 'Demography', value: 1},
+    {name: 'Water Quality', value: 1},
+    {name: 'Fauna & Flora', value: 1},
+    {name: 'Ressources', value: 1},
+    {name: 'Space', value: 1}
 ]

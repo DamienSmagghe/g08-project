@@ -3,7 +3,9 @@
         <div class="question" v-for="q in questionsAll" v-if="q.id === questId">
             <h4 v-html="q.text"></h4>
             <div class="answer" v-for="answer in q.answers">
-                <button v-bind:class="{current: answer.effects === effect}" @click="storeEffects(answer.effects)"><font-awesome-icon icon="coffee"/>{{answer.text}}</button>
+                <button v-bind:class="{current: answer.effects === effect}" @click="storeEffects(answer.effects)">
+                    <font-awesome-icon :icon="answer.icon"/> {{answer.text}}
+                </button>
             </div>
         </div>
         <button class="validation" @click="nextQuestion" :disabled="effect === null">Confirm</button>
@@ -12,8 +14,19 @@
 </template>
 
 <script>
-  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+ import {
+    library
+  } from '@fortawesome/fontawesome-svg-core'
+  import {
+    fas
+  } from '@fortawesome/free-solid-svg-icons'
+  import {
+    FontAwesomeIcon
+  } from '@fortawesome/vue-fontawesome'
 
+  library.add(fas)
+
+  
     import {
         affectThemes
     } from './themes.js'

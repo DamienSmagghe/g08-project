@@ -5,11 +5,13 @@
             <p> {{chapter.content}}</p>
             <span></span>
         </div>
-        <audio src="static/assets/sounds/story1.mp3" type="audio/mp3" autoplay></audio>
+        <audio :src="chapter.sound" type="audio/mp3" class="voice"></audio>
     </div>
 </template>
 
 <script>
+import { voiceControl } from './store.js'
+
     export default {
         name: 'story',
         props: {
@@ -17,12 +19,20 @@
         },
         data() {
             return {
-                // voiceSource: require(this.chapter.sound)
+                isVoice: voiceControl.isVoice
             }
         },
         computed: {
             chapter() {
                 return this.chapterData
+            }
+        },
+        mounted() {
+            if(this.isVoice) {
+                document.querySelector('.voice').play()
+            }
+            else {
+               document.querySelector('.voice').pause() 
             }
         }
     }

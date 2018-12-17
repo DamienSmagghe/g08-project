@@ -4,11 +4,12 @@
             <img src="../../assets/images/bg2.png" alt="Cosmos" class="background">
             <h3 class="planet-name">{{planetName}}</h3>
             <gauges v-bind:earth-viability="dataEarthViability" :population-viability="dataPopulationViability"></gauges>
-            <div class="planet__container"></div>
+            <div class="planet__container">
+    
+            </div>
             <questions v-bind:questions="allQuestions" v-bind:earth-viability="dataEarthViability" v-bind:population-viability="dataPopulationViability" v-on:updateViabilities="updateGauge"></questions>
             <era v-bind:current-era="era"></era>
         </div>
-    
     </div>
 </template>
 
@@ -23,7 +24,8 @@
         earthViability,
         populationViability
     } from './viabilities.js'
-    
+    import Renderer from '../world/components/Renderer.js'
+
     export default {
         name: 'Questionnary',
         components: {
@@ -43,6 +45,9 @@
                 questionId: 0
             }
         },
+        mounted() {
+            // const planet = new Renderer()
+        },
         computed: {
             era() {
                 if (this.questionId < 25) {
@@ -57,12 +62,15 @@
         methods: {
             updateGauge() {
                 this.questionId++
-                    console.log(this.questionId)
+                    if (this.questionId >= 73) {
+                        this.$emit('end')
+                    }
                 this.dataEarthViability = earthViability.value
                 this.dataPopulationViability = populationViability.value
     
                 if ((this.dataEarthViability < 0.1) || (this.dataPopulationViability < 0.1)) {
                     this.isLosing = true
+                    this.$emit('end')
                 }
             }
         }

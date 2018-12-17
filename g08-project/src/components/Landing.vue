@@ -50,9 +50,14 @@
                     this.$emit('run', this.planetName)
                 }
             },
-            scrollChapter() {
+            scrollChapter(_event) {
                 if (this.chapter > 1 && this.chapter < 4 && this.justChanged === false) {
-                    this.iterateChapter()
+                    if (_event.deltaY < 0) {
+                        this.chapter--
+                    }
+                    else if (_event.deltaY > 0) {
+                        this.iterateChapter()
+                    }
                     this.justChanged = true
                     if (this.chapter <= 4) {
                         window.setTimeout(() => {
@@ -78,7 +83,8 @@
         top: 0;
         left: 0;
         object-fit: cover;
-        filter: brightness(80%)
+        filter: brightness(80%);
+        z-index: -3;
     }
     
     .landing .earth {
