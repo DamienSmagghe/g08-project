@@ -21,7 +21,6 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'indent': 1,
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development

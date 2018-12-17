@@ -11,7 +11,7 @@
 <script>
     export default {
         name: 'era',
-        props : {
+        props: {
             currentEra: Number
         }
     }
@@ -40,13 +40,31 @@
         background: white;
         top: -8px;
     }
-    .dot-1 { left: 15%}
-    .dot-2 { left: 50%}
-    .dot-3 { left: 85%}
-
-    .dot-1::after{ content: 'Colonial Era'}
-    .dot-2::after{ content: 'Progressist Era'}
-    .dot-3::after{ content: 'Futuristic Era'}
+    
+    .dot-1 {
+        left: 15%
+    }
+    
+    .dot-2 {
+        left: 50%
+    }
+    
+    .dot-3 {
+        left: 85%
+    }
+    
+    .dot-1::after {
+        content: 'Colonial Era'
+    }
+    
+    .dot-2::after {
+        content: 'Progressist Era'
+    }
+    
+    .dot-3::after {
+        content: 'Futuristic Era'
+    }
+    
     .dot::after {
         position: absolute;
         width: 120px;
@@ -55,6 +73,7 @@
         color: white;
         font-family: 'Roboto', 'helvetica', sans-serif;
     }
+    
     .row .dot::before {
         content: '';
         display: block;
@@ -74,10 +93,10 @@
     .row .dot.current::before {
         transform: scale(1);
     }
+    
     @media screen and (max-width: 960px) {
         .era__container {
             display: none;
         }
-        
     }
 </style>

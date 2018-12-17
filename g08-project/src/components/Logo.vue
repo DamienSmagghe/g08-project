@@ -5,10 +5,11 @@
     </div>
 </template>
 <script>
-export default {
-    name: 'logo'
-}
+    export default {
+        name: 'logo'
+    }
 </script>
+
 <style scoped>
     .logo__container {
         display: flex;
@@ -19,28 +20,32 @@ export default {
         left: 0;
         z-index: 99;
     }
+    
     .logo__container img {
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
     }
+    
     .logo__container h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: normal;
         font-family: 'Fjalla', 'helvetica', sans-serif;
         text-transform: uppercase;
         letter-spacing: 0.2rem;
     }
+    
     .logo__container img {
         margin-right: 15px;
     }
+    
     @media screen and (max-width: 660px) {
         .logo__container h1 {
             font-size: 0.8rem;
         }
         .logo__container img {
-        width: 2rem;
-        height: 2rem;
-    }
+            width: 2rem;
+            height: 2rem;
+        }
     }
 </style>
 

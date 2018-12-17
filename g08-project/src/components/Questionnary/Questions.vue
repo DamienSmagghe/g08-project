@@ -3,15 +3,17 @@
         <div class="question" v-for="q in questionsAll" v-if="q.id === questId">
             <h4 v-html="q.text"></h4>
             <div class="answer" v-for="answer in q.answers">
-                <input type="button" v-bind:class="{current: answer.effects === effect}" @click="storeEffects(answer.effects)" :value="answer.text">
+                <button v-bind:class="{current: answer.effects === effect}" @click="storeEffects(answer.effects)"><font-awesome-icon icon="coffee"/>{{answer.text}}</button>
             </div>
         </div>
-        <button class="validation" @click="nextQuestion" :disabled="effect === null">Validate</button>
+        <button class="validation" @click="nextQuestion" :disabled="effect === null">Confirm</button>
         <span></span>
     </div>
 </template>
 
 <script>
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
     import {
         affectThemes
     } from './themes.js'
@@ -22,6 +24,9 @@
     
     export default {
         name: 'questions',
+        components: {
+            'font-awesome-icon': FontAwesomeIcon
+        },
         props: {
             questions: Array,
             earthViability: Number,
@@ -89,14 +94,18 @@
         padding: 20px;
         margin: 20px;
     }
-    .question, input {
+    
+    .question,
+    button {
         max-width: 100%;
         white-space: normal;
     }
+    
     .answer .current {
-        background: #5CA2FF;    
+        background: #5CA2FF;
     }
-    input,
+    
+    button,
     .validation {
         background: transparent;
         border: 2px solid #5CA2FF;
@@ -110,7 +119,8 @@
         will-change: transform;
     }
     
-    input:focus, .validation:focus {
+    button:focus,
+    .validation:focus {
         outline: none
     }
     
@@ -122,7 +132,9 @@
         position: absolute;
         bottom: 5px;
     }
-    .validation:active, input:active {
+    
+    .validation:active,
+    button:active {
         transform: scale(0.98) translateY(-2px)
     }
     
@@ -130,9 +142,11 @@
     .validation[disabled] {
         opacity: 0.5;
     }
+    
     .question h4 {
         margin-top: 0;
     }
+    
     .question h4::after {
         content: '';
         display: block;
@@ -142,12 +156,29 @@
         font-size: 1.5rem;
         margin: 10px auto;
     }
+    
     @media screen and (max-width: 960px) {
         .questions {
             width: 100%;
             height: 35%;
-            margin: 20px;
+            top: -5%;
         }
-        
+    }
+    
+    @media screen and (max-width: 660px) {
+        .questions {
+            font-size: 0.8rem;
+        }
+        .answer button,
+        .validation {
+            font-size: 0.6rem;
+        }
+        .answer button {
+            padding: 3px 10px;
+            margin: 3px;
+        }
+        .validation {
+            padding: 6px 15px;
+        }
     }
 </style>

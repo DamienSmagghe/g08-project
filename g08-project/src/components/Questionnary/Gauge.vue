@@ -16,40 +16,46 @@
                 <div class="gauge" v-bind:style="{transform: 'scaleX(' + populationViability + ')'}"></div>
             </div>
         </div>
-        
+    
         <span></span>
     </div>
 </template>
+
 <script>
-export default {
-    name: 'Gauges',
-    props: {
-        earthViability: Number,
-        populationViability: Number
+    export default {
+        name: 'Gauges',
+        props: {
+            earthViability: Number,
+            populationViability: Number
+        }
     }
-}
 </script>
+
 <style scoped>
-.gauge__container {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 10px;
-    font-family: 'Fjalla', 'helvetica', sans-serif;
-    letter-spacing: 0.05rem;
-}
-.gauge__content {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-}
-.gauge__content .gauge__info h4 {
-    margin: 0 10px 5px 10px;
-}
-.gauge__info span {
-    color: white;
-}
+    .gauge__container {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 10px;
+        font-family: 'Fjalla', 'helvetica', sans-serif;
+        letter-spacing: 0.05rem;
+    }
+    
+    .gauge__content {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    
+    .gauge__content .gauge__info h4 {
+        margin: 0 10px 5px 10px;
+    }
+    
+    .gauge__info span {
+        color: white;
+    }
+    
     .gauge__border {
         border: 1px solid white;
         border-radius: 30px;
@@ -58,6 +64,7 @@ export default {
         height: 15px;
         overflow: hidden;
     }
+    
     .gauge__container .gauge {
         width: 100%;
         height: 100%;
@@ -69,11 +76,23 @@ export default {
         transition-duration: 0.3s;
         transition-timing-function: ease-out;
     }
+    
     @media screen and (max-width: 960px) {
         .gauge__container {
-            width: 100%;
+            width: 300px;
+            font-size: 0.8rem;
+            margin-top: 40px;
         }
-        
+        .gauge__border {
+            height: 10px;
+        }
+    }
+    
+    @media screen and (max-width: 660px) {
+        .gauge__container {
+            margin-top: 20px;
+            padding: 5px;
+        }
     }
 </style>
 

@@ -5,7 +5,7 @@
             <p> {{chapter.content}}</p>
             <span></span>
         </div>
-        <audio src="../assets/sounds/story1.mp3" type="audio/mp3" autoplay></audio>
+        <audio src="static/assets/sounds/story1.mp3" type="audio/mp3" autoplay></audio>
     </div>
 </template>
 
@@ -53,5 +53,11 @@
     .paragraph {
         position: relative;
         padding: 20px;
+        margin: 20px;
+    }
+    @media screen  and (max-width: 660px){
+        .story {
+            width: 100%;
+        }
     }
 </style>
