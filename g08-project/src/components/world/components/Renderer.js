@@ -1,4 +1,5 @@
 import Controler from './Controler.js'
+
 export default class Renderer extends Controler
 {
     constructor()

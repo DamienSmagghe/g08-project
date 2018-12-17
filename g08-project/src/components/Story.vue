@@ -28,6 +28,7 @@ import { voiceControl } from './store.js'
             }
         },
         mounted() {
+            console.log(this.isVoice)
             if(this.isVoice) {
                 document.querySelector('.voice').play()
             }

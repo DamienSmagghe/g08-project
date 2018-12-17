@@ -65,7 +65,7 @@
                     if (this.chapter <= 4) {
                         window.setTimeout(() => {
                             this.justChanged = false
-                        }, 2000)
+                        }, 1000)
                     }
                 }
             }
@@ -86,7 +86,7 @@
         top: 0;
         left: 0;
         object-fit: cover;
-        filter: brightness(80%);
+        filter: brightness(60%);
         z-index: -3;
     }
     

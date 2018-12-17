@@ -14,6 +14,7 @@
 </template>
 
 <script>
+    
     import Gauges from './Gauge.vue'
     import Questions from './Questions.vue'
     import Era from './Era.vue'
@@ -25,7 +26,7 @@
         populationViability
     } from './viabilities.js'
     import Renderer from '../world/components/Renderer.js'
-
+    
     export default {
         name: 'Questionnary',
         components: {
@@ -46,7 +47,7 @@
             }
         },
         mounted() {
-            // const planet = new Renderer()
+            const planet = new Renderer()
         },
         computed: {
             era() {
