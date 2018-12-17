@@ -2,15 +2,18 @@
     <div class="end-page">
         <theme-result :data="populationThemes"></theme-result>
         <theme-result :data="planetThemes"></theme-result>
+        <social></social>
     </div>
 </template>
 <script>
 import { affectThemes } from './Questionnary/themes.js'
 import ThemeResult from './ThemeResult.vue'
+import Social from './Social.vue'
 export default {
         name: 'end-page',
         components: {
-            'theme-result': ThemeResult
+            'theme-result': ThemeResult,
+            'social': Social
         },
         computed: {
             populationThemes() {
@@ -32,7 +35,6 @@ export default {
 </script>
 <style>
 .end-page {
-    padding: 60px 20px 20px 20px;
     position: absolute;
     top: 0;
     left: 0;

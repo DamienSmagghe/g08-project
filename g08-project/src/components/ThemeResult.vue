@@ -22,10 +22,22 @@ export default {
 <style>
 .theme__result {
     position: relative;
-    padding: 20px;
-    width: 20%;
-    height: 80%;
+    padding: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* a modifier en responsive */
+    width: 200px; 
+    height: 500px;
 }
+
+.theme__result:first-child{
+    left: 60px;
+}
+
+.theme__result:nth-child(2){
+    right: 60px;
+}
+
 .gauge__border {
         border: 1px solid white;
         border-radius: 30px;
@@ -37,6 +49,7 @@ export default {
     }
     .theme__result h4 {
         margin: 0 0 5px 0;
+        font-size: 13px;
     }
     .gauge {
         width: 100%;

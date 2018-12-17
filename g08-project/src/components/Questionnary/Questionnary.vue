@@ -79,10 +79,10 @@
 
 <style>
     .planet-name {
-        width: 20%;
+        /* width: 20%; */
         position: absolute;
         top: 0;
-        left: 45%;
+        left: 50%;
         transform: translateX(-50%);
         text-transform: uppercase;
         font-family: 'Fjalla', 'helvetica', sans-serif;
