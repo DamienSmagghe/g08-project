@@ -1,11 +1,16 @@
 <template>
   <div id="app">
+    <img src="./assets/images/bg2.png" alt="Cosmos" class="background">
     <logo></logo>
     <landing @run="game" v-if="!gameLaunch"></landing>
     <transition name="fade">
-      <questionnary v-if="gameLaunch" :planet-name="planetName"></questionnary>
+      <questionnary v-if="gameLaunch && !gameEnd" :planet-name="planetName" @end="gameEnd = true"></questionnary>
+    </transition>
+    <transition name="fade">
+      <end-page v-if="gameEnd"></end-page>
     </transition>
     <sounds></sounds>
+    <audio src="../static/assets/sounds/music.mp3" autoplay loop class="music"></audio>
     <router-view/>
   </div>
 </template>
@@ -15,6 +20,7 @@
   import Landing from './components/Landing.vue'
   import Logo from './components/Logo.vue'
   import Sounds from './components/Sounds.vue'
+  import EndPage from './components/EndPage.vue'
   
   export default {
     name: 'App',
@@ -22,12 +28,14 @@
       'questionnary': Questionnary,
       'landing': Landing,
       'logo': Logo,
-      'sounds': Sounds
+      'sounds': Sounds,
+      'end-page': EndPage
     },
     data() {
       return {
         gameLaunch: false,
-        planetName: ''
+        planetName: '',
+        gameEnd: false
       }
     },
     methods: {
@@ -35,6 +43,10 @@
         this.planetName = value
         this.gameLaunch = true
       }
+    },
+    mounted() {
+      let music = document.querySelector('.music')
+      music.volume = 0.2
     }
   }
 </script>

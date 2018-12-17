@@ -78,7 +78,8 @@
         top: 0;
         left: 0;
         object-fit: cover;
-        filter: brightness(80%)
+        filter: brightness(80%);
+        z-index: -3;
     }
     
     .landing .earth {

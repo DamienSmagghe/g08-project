@@ -57,12 +57,15 @@
         methods: {
             updateGauge() {
                 this.questionId++
-                    console.log(this.questionId)
+                if (this.questionId >= 73) {
+                    this.$emit('end')
+                }
                 this.dataEarthViability = earthViability.value
                 this.dataPopulationViability = populationViability.value
     
                 if ((this.dataEarthViability < 0.1) || (this.dataPopulationViability < 0.1)) {
                     this.isLosing = true
+                    this.$emit('end')
                 }
             }
         }

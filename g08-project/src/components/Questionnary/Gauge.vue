@@ -31,7 +31,7 @@
     }
 </script>
 
-<style scoped>
+<style>
     .gauge__container {
         width: 20%;
         display: flex;
@@ -52,9 +52,6 @@
         margin: 0 10px 5px 10px;
     }
     
-    .gauge__info span {
-        color: white;
-    }
     
     .gauge__border {
         border: 1px solid white;
