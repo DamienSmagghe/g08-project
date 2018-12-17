@@ -5,7 +5,7 @@
             <p> {{chapter.content}}</p>
             <span></span>
         </div>
-        <audio :src="chapter.sound" type="audio/mp3" class="voice"></audio>
+        <audio :src="chapter.sound" type="audio/mp3" :autoplay="isVoice" class="voice"></audio>
     </div>
 </template>
 
@@ -25,14 +25,6 @@ import { voiceControl } from './store.js'
         computed: {
             chapter() {
                 return this.chapterData
-            }
-        },
-        mounted() {
-            if(this.isVoice) {
-                document.querySelector('.voice').play()
-            }
-            else {
-               document.querySelector('.voice').pause() 
             }
         }
     }

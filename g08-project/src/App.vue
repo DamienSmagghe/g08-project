@@ -10,7 +10,7 @@
       <end-page v-if="gameEnd"></end-page>
     </transition>
     <sounds></sounds>
-    <audio src="../static/assets/sounds/music.mp3" autoplay loop class="music"></audio>
+    <audio src="../static/assets/sounds/music.mp3" loop class="music"></audio>
     <router-view/>
   </div>
 </template>

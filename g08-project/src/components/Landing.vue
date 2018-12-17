@@ -12,7 +12,7 @@
             <input v-if="chapter === 4" v-model="planetName" type="text" maxlength="12" class="planet__name" @keypress.13="shouldRun" required>
             <label v-if="chapter === 4" for="name">Name your planet</label>
         </div>
-        <launch v-if="chapter === 1" v-on:launch="iterateChapter"></launch>
+        <launch v-if="chapter === 1" v-on:launch="runExperience"></launch>
     </div>
 </template>
 
@@ -45,7 +45,9 @@
             }
         },
         methods: {
-            iterateChapter() {
+            runExperience() {
+                let music = document.querySelector('.music')
+                music.play()
                 this.chapter++
             },
             shouldRun() {
@@ -59,7 +61,7 @@
                         this.chapter--
                     }
                     else if (_event.deltaY > 0) {
-                        this.iterateChapter()
+                        this.chapter++
                     }
                     this.justChanged = true
                     if (this.chapter <= 4) {
