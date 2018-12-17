@@ -8,7 +8,10 @@
             <story v-for="chap in chapterContent" v-bind:key="chap.id" :chapter-data="chap" v-if="chapter === chap.id + 2"></story>
         </transition-group>
         <h3 class="earth" v-if="chapter === 1">Eart<span>h</span></h3>
-        <input v-if="chapter === 4" v-model="planetName" type="text" maxlength="12" placeholder="Name Your Planet" class="planet__name" @keypress.13="shouldRun" required>
+        <div class="groupInput">
+            <input v-if="chapter === 4" v-model="planetName" type="text" maxlength="12" class="planet__name" @keypress.13="shouldRun" required>
+            <label v-if="chapter === 4" for="name">Name your planet</label>
+        </div>
         <launch v-if="chapter === 1" v-on:launch="iterateChapter"></launch>
     </div>
 </template>
@@ -101,11 +104,52 @@
         letter-spacing: 4rem;
     }
     
-    .planet__name {
+    /* .planet__name {
         position: absolute;
         top: 80%;
         left: 50%;
         transform: translateX(-50%);
+    } */
+
+       .groupInput{
+        position: relative;
+        width:200px;
+        top:80%;
+        left:50%;
+        transform: translateX(-50%);
+    }
+
+    input{
+        font-size:18px;
+        display:block;
+        width:200px;
+        background: none;
+        border:none;
+        border-bottom: 2px solid #fff;
+    }
+    
+    input[type=text]{
+        color: #fff;
+    }
+
+    input:focus{ 
+        outline:none;
+    }
+    
+    label{
+        color:#fff; 
+        font-size:14px;
+        font-weight:normal;
+        position:absolute;
+        pointer-events:none;
+        top:0;
+        transition:0.2s ease all; 
+    }
+
+    input:focus ~ label, input:valid ~ label{
+        top:-20px;
+        font-size:10px;
+        color: rgba(255,255,255,0.5);
     }
     
     .landing .earth span {
