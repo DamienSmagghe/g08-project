@@ -15,6 +15,7 @@
 </template>
 
 <script>
+    import Planet from '../Planet.js'
     import Gauges from './Gauge.vue'
     import Questions from './Questions.vue'
     import Era from './Era.vue'
@@ -47,7 +48,7 @@
             }
         },
         mounted() {
-            // const planet = new Renderer()
+            const planet = new Planet(document.querySelector('.planet__container'))
         },
         computed: {
             era() {
@@ -99,7 +100,14 @@
         margin: 20px;
         height: 100%;
     }
-    
+    .planet__container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100vw;
+        height: 100vh;
+    }
     .questionnary {
         font-family: 'Roboto';
         width: 100vw;
