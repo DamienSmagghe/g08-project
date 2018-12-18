@@ -2,7 +2,7 @@
   <div id="app">
     <img src="./assets/images/bg2.png" alt="Cosmos" class="background">
     <logo></logo>
-    <landing @run="game" v-if="!gameLaunch"></landing>
+    <!-- <landing @run="game" v-if="!gameLaunch"></landing> -->
     <transition name="fade">
       <questionnary v-if="gameLaunch && !gameEnd" :planet-name="planetName" @end="gameEnd = true"></questionnary>
     </transition>
@@ -35,7 +35,7 @@
       return {
         gameLaunch: false,
         planetName: '',
-        gameEnd: false
+        gameEnd: true
       }
     },
     methods: {
