@@ -1,7 +1,7 @@
 <template>
     <div class="questionnary">
         <div class="game">
-            <img src="../../assets/images/bg2.png" alt="Cosmos" class="background">
+            <img src="../../assets/images/bg2.jpg" alt="Cosmos" class="background">
             <h3 class="planet-name">{{planetName}}</h3>
             <gauges v-bind:earth-viability="dataEarthViability" :population-viability="dataPopulationViability"></gauges>
             <div class="planet__container">
@@ -26,7 +26,6 @@
         earthViability,
         populationViability
     } from './viabilities.js'
-
     export default {
         name: 'Questionnary',
         components: {

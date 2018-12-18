@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/images/bg2.png" alt="Cosmos" class="background">
+    <img src="./assets/images/bg2.jpg" alt="Cosmos" class="background">
     <logo></logo>
     <landing @run="game" v-if="!gameLaunch"></landing>
     <transition name="fade">
