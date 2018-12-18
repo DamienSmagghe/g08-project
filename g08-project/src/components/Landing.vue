@@ -103,13 +103,6 @@
         font-weight: normal;
         letter-spacing: 4rem;
     }
-    
-    /* .planet__name {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translateX(-50%);
-    } */
 
        .groupInput{
         position: relative;

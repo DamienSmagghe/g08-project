@@ -1,8 +1,16 @@
 <template>
     <div class="end-page">
         <theme-result :data="populationThemes"></theme-result>
+        <div class="endGameText">
+            <div class="titleEndPage"><strong>Your Result</strong></div>
+            <div class="currentText">You are a very honourable eco-citizen. You are aware of the global challenges and want to protect the environment. However, you can do even better to save the planet, preserve its resources and prepare for a brighter future for future generations.</div>
+        </div>
+        
         <theme-result :data="planetThemes"></theme-result>
-        <social></social>
+        <social></social> 
+        <div class="endButton">
+            <button>Get your results</button>
+        </div>
     </div>
 </template>
 <script>
@@ -41,6 +49,59 @@ export default {
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
+
+.endGameText{
+    position: relative;
+    width:40%;
+    height: 200px;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+.titleEndPage{
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.currentText{
+    text-align: center;
+    margin-top: 40px;
+    line-height: 1.5rem;
+}
+
+.endButton{
+    position: absolute;
+    top: 90%;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.endButton button {
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 20px;
+        background: transparent;
+        border: 1px solid white;
+        cursor: pointer;
+        transition: 0.2s ease-out;
+        opacity: 0.9;
+    }
+    
+    .endButton button:hover {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    
+    .endButton button:active {
+        transform: scale(1.02) translateY(-1px);
+    }
+    
+    .endButton button:focus {
+        outline: none;
+    }
 </style>

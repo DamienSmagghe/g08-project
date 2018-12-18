@@ -9,6 +9,7 @@
             </div>
         </div>
         <span></span>
+        <div class="themeResultTitle">Information</div>
     </div>
 </template>
 <script>
@@ -30,11 +31,19 @@ export default {
     height: 500px;
 }
 
+.themeResultTitle{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
 .theme__result:first-child{
     left: 60px;
 }
 
-.theme__result:nth-child(2){
+.theme__result:nth-child(3){
     right: 60px;
 }
 
@@ -61,6 +70,11 @@ export default {
         transition-delay: 0.3s;
         transition-duration: 0.3s;
         transition-timing-function: ease-out;
+    }
+@media screen and (max-width: 660px) {
+        .theme__result h4 {
+            font-size: 10px;
+        }
     }
 </style>
 
