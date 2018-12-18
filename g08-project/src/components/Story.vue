@@ -61,6 +61,7 @@ import { voiceControl } from './store.js'
     @media screen  and (max-width: 660px){
         .story {
             width: 100%;
+            line-height: 1.4rem;
         }
     }
 </style>

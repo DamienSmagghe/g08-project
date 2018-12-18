@@ -98,49 +98,49 @@
   .cornered:before {
     display: block;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     top: 0;
     left: 0;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
   }
   
   .cornered:after {
     display: block;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     top: 0;
     right: 0;
-    border-top: 2px solid white;
-    border-right: 2px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
   }
   
   .cornered span:before {
     display: block;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     bottom: 0;
     left: 0;
-    border-bottom: 2px solid white;
-    border-left: 2px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
   }
   
   .cornered span:after {
     display: block;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     bottom: 0;
     right: 0;
-    border-bottom: 2px solid white;
-    border-right: 2px solid white;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
   }
 </style>
 

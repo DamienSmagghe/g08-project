@@ -109,12 +109,14 @@
     @media screen and (max-width: 660px) {
         .chapter__container {
             bottom: -40%;
-            left: 50%;
+            left: 43%;
             transform: rotate(-90deg) translate(0, 20%);
         }
         .chapter__container .row .dot.current::after {
             transform: rotate(90deg);
             left: 0;
+            font-size: 14px;
+            top: 5px;
         }
     }
 </style>
