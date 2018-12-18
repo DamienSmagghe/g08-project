@@ -1,27 +1,50 @@
-# g08-roject
+# TERRA-STAR
 
-> A game for a school project at hetic
+A game for simulating a new colony for humanity in a new planet.
 
-## Build Setup
+## Getting Started
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+### Prerequisites
 
-# run unit tests
-npm run unit
+A modern browser, NodeJS
 
-# run all tests
-npm test
-```
+## Features
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+* StoryTelling
+* Voices
+* Music & Sounds
+* Planet Naming
+* Questionnary to influence on planet and population viability
+* 3D particle planet visualisation
+* End game results and sharing option
+
+## Built With
+
+* [HTML5](https://developer.mozilla.org/fr/docs/Web/HTML) - Web content language
+* [CSS3](https://developer.mozilla.org/fr/docs/Web/CSS) - Web styling language
+* [VUE.JS](https://vuejs.org/) - Web data binding framework based on Javascript
+* [THREE.JS](https://threejs.org/) - 3D Library based on WebGL
+
+
+## Authors
+
+* **Damien Smagghe** - [Github](https://github.com/DamienSmagghe) - VUEJS Developper
+* **Alexandre Chabeau** - [Github](https://github.com/SaucySpray) - THREEJS Developper
+* **Axel Thomas** - [Github](https://github.com/AxelThomas) - CSS Developper & Designer
+* **Louis Charles Petit** - [Github](https://dribbble.com/Embu) - Writer & Sound Designer
+* **Camille Robillard** - [Github](https://github.com/DamienSmagghe) - Illustrator & Writer
+* **Amaury Mouquet** - [Github](https://github.com/DamienSmagghe) - Searcher
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Thanks to Troy Ragnor for doubling storytelling.
+

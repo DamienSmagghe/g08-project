@@ -1,5 +1,5 @@
 <template>
-    <div class="landing" @wheel="scrollChapter">
+    <div class="landing" @wheel="scrollChapter" @touchstart="touchPosition" @touchmove="touchChapter">
         <img src="../assets/images/bg.jpg" alt="Earth vue" class="background">
         <scroll v-if="chapter > 1"></scroll>
         <chapter :who-current="chapter"></chapter>
@@ -41,7 +41,8 @@
                 chapter: 1,
                 chapterContent: storyTelling,
                 justChanged: false,
-                planetName: ''
+                planetName: '',
+                ts: Number
             }
         },
         methods: {
@@ -53,6 +54,33 @@
             shouldRun() {
                 if (this.planetName.length > 2) {
                     this.$emit('run', this.planetName)
+                }
+            },
+            touchPosition(_event) {
+                this.ts = _event.touches[0].clientY
+            },
+            touchChapter(_event) {
+                let contact = _event.touches
+                let end = contact[0].pageY
+                let distance = end - this.ts
+
+                if (distance < -30 && this.justChanged === false && this.chapter > 1 && this.chapter < 4) {
+                    this.chapter--
+                    this.justChanged = true
+                    if (this.chapter <= 4) {
+                        window.setTimeout(() => {
+                            this.justChanged = false
+                        }, 2000)
+                    }
+                }
+                if (distance > 30 && this.justChanged === false && this.chapter > 1 && this.chapter < 4) {
+                    this.chapter++
+                    this.justChanged = true
+                    if (this.chapter <= 4) {
+                        window.setTimeout(() => {
+                            this.justChanged = false
+                        }, 2000)
+                    }
                 }
             },
             scrollChapter(_event) {

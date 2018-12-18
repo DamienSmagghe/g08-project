@@ -18,7 +18,7 @@ import { voiceControl } from './store.js'
                 isMusic: true,
                 isVoice: true,
                 volumeSrc: require('../assets/images/volume.svg'),
-                voiceSrc: require('../assets/images/volume.svg')
+                voiceSrc: require('../assets/images/micro.svg')
             }
         },
         methods: {
@@ -39,12 +39,12 @@ import { voiceControl } from './store.js'
                 this.isVoice = !this.isVoice
                 let voice = document.querySelector('.voice')
                 if (this.isVoice) {
-                    this.voiceSrc = require('../assets/images/volume.svg')
+                    this.voiceSrc = require('../assets/images/micro.svg')
                     voice.play()
                     voiceControl.isVoice = true
                 }
                 else {
-                    this.voiceSrc = require('../assets/images/mute.svg')
+                    this.voiceSrc = require('../assets/images/micromute.svg')
                     voice.pause()
                     voiceControl.isVoice = false
                 }

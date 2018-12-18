@@ -10,6 +10,7 @@
             <questions v-bind:questions="allQuestions" v-bind:earth-viability="dataEarthViability" v-bind:population-viability="dataPopulationViability" v-on:updateViabilities="updateGauge"></questions>
             <era v-bind:current-era="era"></era>
         </div>
+        <audio src="../../../static/assets/sounds/cling.mp3" autoplay></audio>
     </div>
 </template>
 

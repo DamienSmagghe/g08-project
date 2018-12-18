@@ -1,6 +1,6 @@
 <template>
     <div class="social__container">
-        <div class="row"></div>
+        <div class="row"></div> 
         <ul>
             <li>
                 <a href="https://www.instagram.com/terrastar.hetic/" target="_blank">

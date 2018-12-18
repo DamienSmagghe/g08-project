@@ -1,8 +1,8 @@
 <template>
     <div class="story">
-            <h3 class="chapter__title">{{chapter.title}}</h3>
-            <div class="paragraph cornered">
-            <p> {{chapter.content}}</p>
+        <h3 class="chapter__title" v-html="chapter.title"></h3>
+        <div class="paragraph cornered">
+            <p v-html="chapter.content"></p>
             <span></span>
         </div>
         <audio :src="chapter.sound" type="audio/mp3" :autoplay="isVoice" class="voice"></audio>
@@ -56,6 +56,7 @@ import { voiceControl } from './store.js'
         position: relative;
         padding: 20px;
         margin: 20px;
+        line-height: 1.5rem;
     }
     @media screen  and (max-width: 660px){
         .story {

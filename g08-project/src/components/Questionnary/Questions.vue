@@ -4,7 +4,7 @@
             <h4 v-html="q.text"></h4>
             <div class="answer" v-for="answer in q.answers">
                 <button v-bind:class="{current: answer.effects === effect}" @click="storeEffects(answer.effects)">
-                    <font-awesome-icon :icon="answer.icon"/> {{answer.text}}
+                    <font-awesome-icon :icon="answer.icon"/> <div class="answer__content" v-html="answer.text"></div>
                 </button>
             </div>
         </div>
@@ -113,7 +113,9 @@
         max-width: 100%;
         white-space: normal;
     }
-    
+    .answer__content {
+        display: inline;
+    }
     .answer .current {
         background: #5CA2FF;
     }
