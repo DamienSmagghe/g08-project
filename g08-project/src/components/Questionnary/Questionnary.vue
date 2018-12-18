@@ -107,7 +107,6 @@
         height: 100vh;
     }
     .questionnary {
-        font-family: 'Roboto';
         width: 100vw;
         height: 100vh;
     }

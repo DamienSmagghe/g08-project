@@ -134,4 +134,33 @@ export default {
     .endButton button:focus {
         outline: none;
     }
+
+    @media screen and (max-width: 960px) {
+        .endGameText{
+            position: absolute;
+            width: 80%;
+            height: 30%;
+            top: 71%;
+            left:50%;
+            transform: translateX(-50%);
+        }
+
+        .titleEndPage{
+            font-size: 14px;
+        }
+
+        .currentText{
+            font-size: 12px;
+            line-height: 1rem;
+            margin-top: 15px;
+        }
+
+        .endButton{
+            top: 92%;
+        }
+
+        .endButton button{
+            font-size: 0.6rem;
+        }
+    }
 </style>

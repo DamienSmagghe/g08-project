@@ -33,23 +33,25 @@
 
 <style>
     .gauge__container {
-        width: 20%;
         display: flex;
         flex-direction: column;
         position: relative;
         padding: 10px;
         font-family: 'Fjalla', 'helvetica', sans-serif;
         letter-spacing: 0.05rem;
+        padding: 20px;
     }
     
     .gauge__content {
         display: flex;
         flex-direction: column;
-        margin: 10px;
+        margin:10px 0;
+
     }
     
     .gauge__content .gauge__info h4 {
         margin: 0 10px 5px 10px;
+        font-size: 13px;
     }
     
     
@@ -58,7 +60,7 @@
         border-radius: 30px;
         padding: 2px;
         width: 100%;
-        height: 15px;
+        height: 10px;
         overflow: hidden;
     }
     
@@ -72,24 +74,6 @@
         transition-delay: 0.3s;
         transition-duration: 0.3s;
         transition-timing-function: ease-out;
-    }
-    
-    @media screen and (max-width: 960px) {
-        .gauge__container {
-            width: 300px;
-            font-size: 0.8rem;
-            margin-top: 40px;
-        }
-        .gauge__border {
-            height: 10px;
-        }
-    }
-    
-    @media screen and (max-width: 660px) {
-        .gauge__container {
-            margin-top: 20px;
-            padding: 5px;
-        }
     }
 </style>
 

@@ -101,11 +101,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 25%;
+        width: 350px;
         height: 65%;
         text-align: center;
         padding: 20px;
-        margin: 20px;
     }
     
     .question,
@@ -115,6 +114,7 @@
     }
     .answer__content {
         display: inline;
+        font-family: 'Montserrat', 'Helvetica', sans-serif;
     }
     .answer .current {
         background: #5CA2FF;
@@ -183,10 +183,11 @@
     @media screen and (max-width: 660px) {
         .questions {
             font-size: 0.8rem;
+            margin-bottom: 20px;
         }
         .answer button,
         .validation {
-            font-size: 0.6rem;
+            font-size: 0.75rem;
         }
         .answer button {
             padding: 3px 10px;

@@ -6,7 +6,6 @@
         </div>
         <img src="../assets/images/arrow.svg" alt="Arrow logo" class="animated">
         <img src="../assets/images/arrow.svg" alt="Arrow logo" class="animated">
-        <div class="row"></div>
     </div>
 </template>
 <script>
@@ -24,12 +23,7 @@ export default {
      bottom: 0;
      margin: 15px;
  }
- .scroll__container .row {
-     width: 2px;
-     height: 25px;
-     background: white;
-     opacity: 0.6;
- }
+
   .scroll__container img:first-of-type {
       width: 30px;
       transform: rotate(0);

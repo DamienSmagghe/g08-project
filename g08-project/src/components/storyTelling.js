@@ -16,6 +16,6 @@ export const storyTelling =
         id: 2,
         title: 'Your mission',
         sound: 'static/assets/sounds/story3.mp3',
-        content: 'Today, you have joined the community of terra selectors. Your new <strong>mission</strong>is to explore the newly discovered XTA-4087 solar system.<div>The Andromeda League would like you to check the possibility of a long-term settlement, and has given you command of a <strong>new colony.</strong></div>'
+        content: 'Today, you have joined the community of terra selectors. Your new <strong>mission</strong> is to explore the newly discovered XTA-4087 solar system.<div>The Andromeda League would like you to check the possibility of a long-term settlement, and has given you command of a <strong>new colony.</strong></div>'
     }
 ]
