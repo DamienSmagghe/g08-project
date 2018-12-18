@@ -25,8 +25,6 @@
         earthViability,
         populationViability
     } from './viabilities.js'
-    import Renderer from '../world/components/Renderer.js'
-
     export default {
         name: 'Questionnary',
         components: {
