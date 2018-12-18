@@ -9,15 +9,21 @@
             </div>
         </div>
         <span></span>
-        <div class="themeResultTitle">Information</div>
+        <div class="themeResultTitle" v-html="info"></div>
     </div>
 </template>
 <script>
 export default {
     name: 'theme-result',
     props: {
-        data: Array
-    }
+        data: Array,
+        info: String
+    },
+    // data(){
+    //     return {
+    //         infoTheme: this.info
+    //     }
+    // }
 }
 </script>
 <style>

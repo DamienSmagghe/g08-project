@@ -84,11 +84,11 @@
                 }
             },
             scrollChapter(_event) {
-                if (this.chapter > 1 && this.chapter < 4 && this.justChanged === false) {
+                if (this.chapter > 1 && this.chapter <= 4 && this.justChanged === false) {
                     if (_event.deltaY < 0) {
                         this.chapter--
                     }
-                    else if (_event.deltaY > 0) {
+                    else if (_event.deltaY > 0 && this.chapter < 4) {
                         this.chapter++
                     }
                     this.justChanged = true

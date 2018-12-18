@@ -1,15 +1,15 @@
 <template>
     <div class="end-page">
-        <theme-result :data="populationThemes"></theme-result>
+        <theme-result :data="populationThemes" info="Population"></theme-result>
         <div class="endGameText">
             <div class="titleEndPage"><strong>Your Result</strong></div>
-            <div class="currentText">You are a very honourable eco-citizen. You are aware of the global challenges and want to protect the environment. However, you can do even better to save the planet, preserve its resources and prepare for a brighter future for future generations.</div>
+            <div class="currentText" v-html="profil"></div>
         </div>
         
-        <theme-result :data="planetThemes"></theme-result>
+        <theme-result :data="planetThemes" info="Planet"></theme-result>
         <social></social> 
         <div class="endButton">
-            <button>Get your results</button>
+            <button @click="genScreenshot">Save your results</button>
         </div>
     </div>
 </template>
@@ -17,11 +17,21 @@
 import { affectThemes } from './Questionnary/themes.js'
 import ThemeResult from './ThemeResult.vue'
 import Social from './Social.vue'
+import html2canvas from 'html2canvas'
+import saveAs from 'file-saver'
+
 export default {
         name: 'end-page',
         components: {
             'theme-result': ThemeResult,
             'social': Social
+        },
+        methods: {
+            genScreenshot() {
+                html2canvas(document.querySelector('#app')).then(function(canvas) {
+                    saveAs(canvas.toDataURL(), 'results.png')
+                })
+            }
         },
         computed: {
             populationThemes() {
@@ -37,6 +47,26 @@ export default {
                     result.push(affectThemes[i])
                 }
                 return result
+            },
+            profil() {
+                if (affectThemes[3].value >= 1 && affectThemes[11].value >= 1 && affectThemes[2].value < 1 && affectThemes[13].value < 1 && affectThemes[8].value < 1) {
+                    return 'You are a very honourable eco-citizen. You are aware of the global challenges and want to protect the environment. However, you can do even better to save the planet, preserve its resources and prepare for a brighter future for future generations.'
+                }
+                else if (affectThemes[4].value >= 1 && affectThemes[2].value >= 1 && affectThemes[8].value < 1 && affectThemes[9].value < 1) {
+                    return 'You are a very material person, able to love beautiful things. However, you still need to be more careful about what is around you. You feel that there is nothing you can do to counter global warming. However, ecology begins with simple actions, such as always having recycled paper bags.'
+                }
+                else if (affectThemes[1].value >= 1 && affectThemes[0].value >= 1 && affectThemes[3].value >= 1 && affectThemes[8].value < 1) {
+                    return 'You are a well educated and educated person. You fit perfectly with the profile our league needs. In addition, you are not totally insensitive to global warming or pollution problems. However, it should be remembered that you still have some way to go to defend 100% the colours of ecology.'
+                }
+                else if (affectThemes[7].value >= 1 && affectThemes[5].value >= 1 && affectThemes[6].value >= 1 && affectThemes[13].value < 1) {
+                    return 'You are a great strategist who likes to participate in the construction of the world. In this you stand out for your ability to be creative. However, you are not afraid to use a lot of resources, which has the effect of damaging the environment.'
+                }
+                else if (affectThemes[14].value >= 1 && affectThemes[12].value >= 1 && affectThemes[6].value >= 1 && affectThemes[10].value < 1 && affectThemes[9].value < 1) {
+                    return 'When it comes to ecology, you can\'t say you\'re an expert, but you know what\'s good for your health and community life. You are making efforts to protect the planet, and that felt good through your choices.'
+                }
+                else {
+                    return 'bullshit profil'
+                }
             }
         }
 }
