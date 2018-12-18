@@ -116,7 +116,7 @@
         top: 0;
         left: 0;
         object-fit: cover;
-        filter: brightness(80%);
+        filter: brightness(40%);
         z-index: -3;
     }
     

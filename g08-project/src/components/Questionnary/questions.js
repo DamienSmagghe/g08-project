@@ -1,10 +1,11 @@
-export const questions = [
+export const questions =
+[
     {
         id: 0,
-        text: 'The slow and uneven progress of our trade has meant that we need to review and reorganize our economic and social policies. What new policy do you want to apply?',
+        text: 'We need to review and <strong>reorganize our economic and social</strong> policies. What new policy do you want to apply?',
         answers: [{
                 text: 'Making our children work',
-                icon: 'coffee',
+				icon: 'briefcase-medical',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -21,7 +22,7 @@ export const questions = [
             },
             {
                 text: 'Make all our men work on a voluntary basis',
-                icon: 'user-secret',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 3,
                         value: -0.05
@@ -38,7 +39,7 @@ export const questions = [
             },
             {
                 text: 'Fostering investment in the education of our young people',
-                icon: 'user-secret',
+				icon: 'lightbulb',
                 effects: [{
                         themeAffected: 7,
                         value: 0.1
@@ -58,9 +59,10 @@ export const questions = [
     },
     {
         id: 1,
-        text: 'You benefit from green spaces (plain, forest, etc.) not yet used. You can use it to increase the following areas: agriculture, industry, entertainment. Which area do you think is most suitable?',
+        text: 'You benefit from <strong>unused</strong> green spaces. In which areas would you like to invest?',
         answers: [{
                 text: 'Agriculture. Resources need to be improved',
+				icon: 'tree',
                 effects: [{
                         themeAffected: 12,
                         value: 0.05
@@ -89,6 +91,7 @@ export const questions = [
             },
             {
                 text: 'Industries. The economy must be improved',
+				icon: 'industry',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -113,7 +116,8 @@ export const questions = [
             },
             {
                 text: 'Entertainment. Comfort must be improved',
-                effects: [{
+                icon: 'couch',
+				effects: [{
                         themeAffected: 2,
                         value: 0.1
                     },
@@ -135,9 +139,10 @@ export const questions = [
     },
     {
         id: 2,
-        text: 'Inequalities between inhabitants are increasing. You have the opportunity to equalize all salaries, but at your own risk. What do you choose?',
+        text: 'Inequalities between inhabitants are increasing. You have the opportunity <strong>to equalize</strong> all salaries, but at your own <strong>risk</strong>. What do you choose?',
         answers: [{
                 text: 'Let\'s be fair and give everyone the same salary',
+				icon: 'couch',
                 effects: [{
                         themeAffected: 6,
                         value: 0.05
@@ -174,6 +179,7 @@ export const questions = [
             },
             {
                 text: 'Let us not equalize wages to preserve the economy',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 6,
                         value: -0.05
@@ -204,12 +210,13 @@ export const questions = [
     },
     {
         id: 3,
-        text: 'Animal meat is highly valued by the population. What is the maximum amount of meat per person that you allow?',
+        text: 'Animal meat is highly valued by the population. What is the <strong>maximum</strong> amount of meat per person that you allow?',
         answers: [{
                 text: 'No pieces of meat',
+				icon: 'leaf',
                 effects: [{
                         themeAffected: 8,
-                        value: -0.1
+                        value: 0.1
                     },
                     {
                         themeAffected: 12,
@@ -223,6 +230,7 @@ export const questions = [
             },
             {
                 text: '1 to 2 pieces of meat per week',
+				icon: 'tree',
                 effects: [{
                         themeAffected: 12,
                         value: -0.05
@@ -235,6 +243,7 @@ export const questions = [
             },
             {
                 text: 'Infinite amount of meat',
+				icon: 'trash-alt',
                 effects: [{
                         themeAffected: 12,
                         value: -0.1
@@ -249,9 +258,10 @@ export const questions = [
     },
     {
         id: 4,
-        text: 'Following several reforms that were unfavourable to them, workers all over the world went on strike. As a result, your colony\'s industry is paralyzed. What answer do you choose to provide?',
+        text: 'Following several <strong>unfavourable reforms</strong>, workers all over the world went on strike. What response do you choose to make to the claims?',
         answers: [{
                 text: 'Yield to workers\' demands',
+				icon: 'theater-masks',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -272,6 +282,7 @@ export const questions = [
             },
             {
                 text: 'Ignore claims',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 6,
                         value: -0.1
@@ -292,6 +303,7 @@ export const questions = [
             },
             {
                 text: 'Sending the army to repress the protesters',
+				icon: 'industry',
                 effects: [{
                         themeAffected: 6,
                         value: -0.1
@@ -326,9 +338,10 @@ export const questions = [
     },
     {
         id: 5,
-        text: 'Following a serious accident in an agri-food industry, you are in charge of closing the company or starting from scratch (or risk losing a lot of money). What are you doing? What are you doing?',
+        text: 'Following a serious accident in an agri-food industry, you are in charge of <strong>closing the company</strong> or <strong>starting from scratch</strong> (loss of money). What are you doing? What are you doing?',
         answers: [{
                 text: 'Close the company. It was already polluting a lot.',
+				icon: 'theater-masks',
                 effects: [{
                         themeAffected: 2,
                         value: -0.1
@@ -353,6 +366,7 @@ export const questions = [
             },
             {
                 text: 'Get the company back on its feet. The industry must be preserved',
+				icon: 'couch',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -379,9 +393,10 @@ export const questions = [
     },
     {
         id: 6,
-        text: 'Working with experts in their field is a plus on your new planet, because you can build great things very quickly. Your engineers have suggested using arcanite to improve production at the various sites. It is a polluting but very effective material. What do you decide?',
+        text: 'Your engineers want to use arcanite to <strong>improve the production</strong> of your planet, it is a <strong>polluting</strong> but very efficient material. What do you decide?',
         answers: [{
                 text: 'Yes, let\'s improve the industry',
+				icon: 'industry',
                 effects: [{
                         themeAffected: 7,
                         value: 0.1
@@ -406,6 +421,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s protect the ecology',
+				icon: 'trash-alt',
                 effects: [{
                         themeAffected: 4,
                         value: -0.1
@@ -432,9 +448,10 @@ export const questions = [
     },
     {
         id: 7,
-        text: 'You are in need of producing more books to strengthen your colony\'s education. In return, you have to destroy 40,000 trees to produce paper. What do you decide?',
+        text: 'You need to produce more books to strengthen your colony\'s <strong>education</strong>. In return, you must <strong>destroy 40,000 trees</strong>. What do you decide?',
         answers: [{
                 text: 'Let us preserve the forest, let us not destroy the trees',
+				icon: 'leaf',
                 effects: [{
                         themeAffected: 12,
                         value: 0.1
@@ -451,6 +468,7 @@ export const questions = [
             },
             {
                 text: 'Destroy half the trees',
+				icon: 'school',
                 effects: [{
                         themeAffected: 1,
                         value: 0.05
@@ -467,6 +485,7 @@ export const questions = [
             },
             {
                 text: 'Destroy the 40,000 trees',
+				icon: 'truck-loading',
                 effects: [{
                         themeAffected: 12,
                         value: -0.1
@@ -485,9 +504,10 @@ export const questions = [
     },
     {
         id: 8,
-        text: 'Teachers in your colony are thinking about creating a new subject that would explain the importance of industrial trades. This would further encourage work at the plant at the end of the studies. What do you think of that?',
+        text: 'Teachers are proposing a new subject that would explain the <strong>importance of industrial trades</strong>. This would further encourage work in the factory at the end of the studies. What do you think of that?',
         answers: [{
                 text: 'Yes, let\'s encourage industrial work',
+				icon: 'industry',
                 effects: [{
                         themeAffected: 7,
                         value: 0.1
@@ -520,6 +540,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s preserve the environment',
+				icon: 'leaf',
                 effects: [{
                         themeAffected: 7,
                         value: -0.05
@@ -546,9 +567,10 @@ export const questions = [
     },
     {
         id: 9,
-        text: 'For a country and its people to develop, it is imperative to invest in and strengthen the education sector. Without investment in quality education, not all other development indicators will progress. Do you agree to give less budget to industries but more to the education sector?',
+        text: 'For population <strong>development</strong>, it is imperative to invest in the education sector. Do you agree to give <strong>less budget</strong> to industries but more to the education sector?',
         answers: [{
                 text: 'Yes, let\'s prioritize teaching',
+				icon: 'school',
                 effects: [{
                         themeAffected: 7,
                         value: 0.1
@@ -577,6 +599,7 @@ export const questions = [
             },
             {
                 text: 'No, the economy remains a priority sector',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 4,
                         value: 0.1
@@ -603,9 +626,10 @@ export const questions = [
     },
     {
         id: 10,
-        text: 'Given the state of social fatigue that governs the metropolises of your colony, we suggest that you set up brothels to increase the satisfaction level. Do you think that\'s a good idea?',
+        text: 'There is a state of <strong>social anxiety</strong> in your colony, we suggest that you set up brothels in order to increase the <strong>satisfaction level</strong>. Is that a good idea?',
         answers: [{
                 text: 'Yes, the well-being of the population first and foremost',
+				icon: 'couch',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -626,6 +650,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s preserve the money for better causes',
+				icon: 'lightbulb',
                 effects: [{
                         themeAffected: 2,
                         value: -0.1
@@ -644,9 +669,10 @@ export const questions = [
     },
     {
         id: 11,
-        text: 'Do you think that organizing exploration sessions on your planet could be useful? The interest would be to be able to discover and conquer new territories. On the other hand, you will most likely reduce the size of the area inhabited by wildlife.',
+        text: 'Do you think organizing exploration sessions is useful? The interest: to be able <strong>to discover and conquer</strong> new territories. The risk: <strong>reducing green space</strong>.',
         answers: [{
                 text: 'Yes, let\'s expand the human surface area',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 6,
                         value: 0.1
@@ -667,6 +693,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s respect the environment',
+				icon: 'leaf',
                 effects: [{
                         themeAffected: 12,
                         value: 0.1
@@ -693,9 +720,10 @@ export const questions = [
     },
     {
         id: 12,
-        text: 'Some of your colony\'s employees are not motivated to work. Giving them rewards for each job done would be a way to motivate them more. However, gifts are not free, and require you to put your hand in the wallet. Do you accept?',
+        text: 'Employees are not motivated to work. A <strong>reward</strong> system could motivate them more, but the disadvantage would be the <strong>price of gifts</strong>. Do you accept?',
         answers: [{
                 text: 'Yes, the comfort of the population above all',
+				icon: 'couch',
                 effects: [{
                         themeAffected: 7,
                         value: 0.05
@@ -709,13 +737,14 @@ export const questions = [
                         value: 0.05
                     },
                     {
-                        themeAffected: 13,
-                        value: -0.05
+                        themeAffected: 2,
+                        value: 0.05
                     }
                 ]
             },
             {
                 text: 'No, our production will suffer as a result',
+				icon: 'industry',
                 effects: [{
                         themeAffected: 7,
                         value: -0.5
@@ -738,9 +767,10 @@ export const questions = [
     },
     {
         id: 13,
-        text: 'An epidemic occurs in your colony. A group of 4000 settlers quickly found themselves infected and placed in quarantine. What do you decide?',
+        text: 'An epidemic occurs in your colony. A group of 4000 settlers quickly found themselves <strong>infected</strong> and placed in <strong>quarantine</strong>. What do you decide?',
         answers: [{
                 text: 'Spending money to find a cure',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 3,
                         value: 0.1
@@ -761,6 +791,7 @@ export const questions = [
             },
             {
                 text: 'Eliminate these men to stop the epidemic',
+				icon: 'briefcase-medical',
                 effects: [{
                         themeAffected: 6,
                         value: 0.1
@@ -777,6 +808,7 @@ export const questions = [
             },
             {
                 text: 'Move the infected to another (unpopulated) planet',
+				icon: 'theater-masks',
                 effects: [{
                         themeAffected: 6,
                         value: 0.1
@@ -799,9 +831,10 @@ export const questions = [
     },
     {
         id: 14,
-        text: 'Recently, the creation of a health department was created within your colony. You know that, at the same time, the creation of health infrastructures is to be planned to treat the population. However, you know that your construction budget is far from unlimited. Which solution do you recommend?',
+        text: 'A health department has been created within your colony. You must therefore build <strong>sanitary facilities</strong>, but the construction budget is <strong>limited</strong>. Which solution do you recommend?',
         answers: [{
                 text: 'Prioritize medicinal plants over health infrastructure',
+				icon: 'leaf',
                 effects: [{
                         themeAffected: 2,
                         value: -0.05
@@ -830,6 +863,7 @@ export const questions = [
             },
             {
                 text: 'Build the health infrastructure without any budget',
+				icon: 'building',
                 effects: [{
                         themeAffected: 3,
                         value: 0.1
@@ -854,6 +888,7 @@ export const questions = [
             },
             {
                 text: 'Borrow from banks to create the infrastructure',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -880,9 +915,10 @@ export const questions = [
     },
     {
         id: 15,
-        text: 'You have the opportunity to promote new encounters in your colony by developing sports, artistic and intellectual associations. Do you accept?',
+        text: 'You have the opportunity to promote <strong>new encounters</strong> in your colony by developing sports, artistic and intellectual <strong>associations</strong>. Do you accept?',
         answers: [{
                 text: 'Yes, let\'s invest in the company',
+				icon: 'building',
                 effects: [{
                         themeAffected: 6,
                         value: 0.1
@@ -911,6 +947,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s save money',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 6,
                         value: -0.1
@@ -933,9 +970,10 @@ export const questions = [
     },
     {
         id: 16,
-        text: 'We propose that you create a new entertainment space that would be powered by clean energy. However, deforestation of a forest will be necessary to create this new area. Do you want to start the project?',
+        text: 'We propose that you create a <strong>new entertainment space</strong> that would be powered by clean energy. However, <strong>deforestation</strong> of a forest will be necessary. Do you want to start the project?',
         answers: [{
                 text: 'Yes, let\'s increase the comfort of society',
+				icon: 'couch',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -956,6 +994,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s preserve the fauna and flora',
+				icon: 'leaf',
                 effects: [{
                         themeAffected: 12,
                         value: 0.1
@@ -974,9 +1013,10 @@ export const questions = [
     },
     {
         id: 17,
-        text: 'An oil spill is pouring near the popular beach of Ysutum. You have the option of stopping the flow of the oil slick or letting the oil flow, which would then be tantamount to threatening the lives of 1000 inhabitants. What do you choose to do?',
+        text: 'An oil spill occurred. You can <strong>stop</strong> the flow of the oil slick or <strong>let</strong> the oil flow but this would threaten the lives of 1000 people. What do you decide?',
         answers: [{
                 text: 'Stop the flow of the oil spill',
+				icon: 'water',
                 effects: [{
                         themeAffected: 11,
                         value: 0.1
@@ -1005,6 +1045,7 @@ export const questions = [
             },
             {
                 text: 'Allow the oil spill to pass',
+				icon: 'trash-alt',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -1039,9 +1080,10 @@ export const questions = [
     },
     {
         id: 18,
-        text: 'Your colony is beginning to establish itself. However, your engineers are wondering how the buildings could be built. Which material would you find most useful?',
+        text: 'Your colony is beginning to establish itself. However, your engineers are <strong>wondering</strong> how the buildings could be built. Which <strong>material</strong> would you find most useful?',
         answers: [{
                 text: 'Use arcanite (terrestrial equivalent of sand)',
+				icon: 'tree',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -1078,6 +1120,7 @@ export const questions = [
             },
             {
                 text: 'Use Liquidia (terrestrial equivalent of iron)',
+				icon: 'building',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -1114,6 +1157,7 @@ export const questions = [
             },
             {
                 text: 'Use Plurium (terrestrial equivalent of aluminium)',
+				icon: 'trash-alt',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -1144,9 +1188,10 @@ export const questions = [
     },
     {
         id: 19,
-        text: 'We propose that you create new roads on your planet to make cities more accessible. Are you starting the project?',
+        text: 'We propose that you <strong>create new roads</strong> on your planet to make cities more <strong>accessible</strong>. Are you starting the project?',
         answers: [{
                 text: 'Yes, let\'s improve the road network',
+				icon: 'building',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -1167,6 +1212,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s preserve the ecology',
+				icon: 'leaf',
                 effects: [{
                         themeAffected: 12,
                         value: 0.1
@@ -1189,9 +1235,10 @@ export const questions = [
     },
     {
         id: 20,
-        text: 'The installation of 20,000 telephone lines in your colony will bring about a major evolution on your planet. However, electricity is a rare commodity because your engineers have just arrived in the field. What do you want to do?',
+        text: 'You can build 20,000 <strong>telephone lines</strong> on your planet. However, <strong>electricity is scarce</strong> because your engineers have just arrived in the field. What do you want to do?',
         answers: [{
                 text: 'Yes, let\'s improve the telephone network',
+				icon: 'trash-alt',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -1224,6 +1271,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s preserve the environment',
+				icon: 'leaf',
                 effects: [{
                         themeAffected: 2,
                         value: -0.05
@@ -1250,9 +1298,10 @@ export const questions = [
     },
     {
         id: 21,
-        text: 'The creation of a product capable of increasing vegetation growth is at your disposal. If you choose to use it, it reduces the area occupied by urban space. On the other hand, it will benefit the global ecosystem. What do you decide?',
+        text: 'A product capable of <strong>increasing plant growth</strong> could develop the global ecosystem, but this would <strong>reduce the urban space</strong> of your colony. What do you decide?',
         answers: [{
                 text: 'You leave the product for sale',
+				icon: 'building',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -1277,6 +1326,7 @@ export const questions = [
             },
             {
                 text: 'You put the product in a limited offer',
+				icon: 'couch',
                 effects: [{
                         themeAffected: 0,
                         value: 0.05
@@ -1301,6 +1351,7 @@ export const questions = [
             },
             {
                 text: 'You do not sell the product',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -1327,9 +1378,10 @@ export const questions = [
     },
     {
         id: 22,
-        text: 'A la suite d’un endettement, le gouvernement de votre colonie vous propose d’imposer de nouvelles taxes sur l’ensemble des classes moyennes. Cela permettra de diminuer drastiquement la dette contractée mais aussi d’accroître les tensions entre les différentes classes sociales. Acceptez-vous ?',
+        text: 'The government of your colony has gone into <strong>debt</strong>. New taxes are proposed to reduce the debt. On the other hand, it is likely to increase <strong>social conflicts</strong>. Do you accept?',
         answers: [{
                 text: 'Yes, it is better not to increase the colony\'s debt further',
+				icon: 'user-alt',
                 effects: [{
                         themeAffected: 13,
                         value: 0.1
@@ -1358,6 +1410,7 @@ export const questions = [
             },
             {
                 text: 'No, it is better to avoid a revolution',
+				icon: 'coins',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -1384,9 +1437,10 @@ export const questions = [
     },
     {
         id: 23,
-        text: 'In recent months, settlers on your planet have begun to adopt a new religion. This consists in sacrificing several people monthly to satisfy the god of the Universe. Although a part of the civilian population does not accept this new religion, another part sees it as an opportunity to reconnect with the old traditions that existed on Earth in the past. What do you choose to do?',
+        text: 'Recently, your colony has been divided because many settlers want to adopt a new <strong>religion</strong>. It would aim <strong>to sacrifice</strong> human beings. What do you choose to do?',
         answers: [{
                 text: 'Approve human sacrifices',
+				icon: 'user-alt',
                 effects: [{
                         themeAffected: 6,
                         value: 0.05
@@ -1427,6 +1481,7 @@ export const questions = [
             },
             {
                 text: 'Do not approve of human sacrifices',
+				icon: 'leaf',
                 effects: [{
                         themeAffected: 8,
                         value: 0.05
@@ -1465,9 +1520,10 @@ export const questions = [
     },
     {
         id: 24,
-        text: 'The scientific department of your colony has just informed you of an imminent danger: the water dam located upstream of the capital is in danger of collapsing soon. However, nearby garbage bins can help create a garbage barrier that holds water. Do you confirm the proposal?',
+        text: 'The <strong>water dam</strong> upstream of the capital is in danger of collapsing. The waste next door can create a <strong>garbage barrier</strong> that will hold water. Do you confirm the proposal?',
         answers: [{
                 text: 'Yes, let us prevent the inhabitants from dying',
+				icon: 'user-alt',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -1496,6 +1552,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s stop the planet from dying',
+				icon: 'trash-alt',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -1526,9 +1583,10 @@ export const questions = [
     },
     {
         id: 25,
-        text: 'The price of electricity, which is only increasing. In order to reduce its consumption, we suggest that you deactivate all objects that use this energy. However, the duration of the cancellation has not yet been clearly defined. What do you decide?',
+        text: 'The price of electricity is only increasing. In order to <strong>reduce its consumption</strong>, we suggest that you <strong>deactivate</strong> all electrical objects. What choice do you recommend?',
         answers: [{
                 text: 'Never turn off the electricity',
+                icon: 'bolt',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -1557,6 +1615,7 @@ export const questions = [
             },
             {
                 text: 'Let\'s deactivate 1 to 2 hours a day',
+                icon: 'tree',
                 effects: [{
                         themeAffected: 9,
                         value: 0.05
@@ -1585,6 +1644,7 @@ export const questions = [
             },
             {
                 text: 'Let\'s deactivate 3 to 4 hours a day',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 8,
                         value: 0.05
@@ -1615,9 +1675,10 @@ export const questions = [
     },
     {
         id: 26,
-        text: 'The price of gasoline is only increasing. However, although it is expensive, it is still essential to keep traffic running. Do you think it is necessary to regulate the accessibility of this product? What is the maximum amount of fuel per person you could imagine?',
+        text: 'The <strong>price of gasoline</strong> is only increasing. The economists in your colony can\'t agree. What is the maximum amount of <strong>fuel</strong> per person you could imagine?',
         answers: [{
                 text: 'Think of the planet: no gasoline sales',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 12,
                         value: 0.1
@@ -1628,7 +1689,7 @@ export const questions = [
                     },
                     {
                         themeAffected: 8,
-                        value: -0.1
+                        value: 0.1
                     },
                     {
                         themeAffected: 0,
@@ -1642,9 +1703,10 @@ export const questions = [
             },
             {
                 text: 'Keeping the economy going: no fuel limits',
+                icon: 'trash-alt',
                 effects: [{
                         themeAffected: 8,
-                        value: 0.1
+                        value: -0.1
                     },
                     {
                         themeAffected: 0,
@@ -1662,6 +1724,7 @@ export const questions = [
             },
             {
                 text: 'Let\'s keep a balance: 10 to 25 litres per week',
+                icon: 'briefcase-medical',
                 effects: [{
                         themeAffected: 8,
                         value: 0.05
@@ -1684,9 +1747,10 @@ export const questions = [
     },
     {
         id: 27,
-        text: 'The Andromeda League has found that the inhabitants of your colony pollute a lot. We propose that you set up an "air tax". What is your answer?',
+        text: 'The Andromeda League has found that the inhabitants of your colony <strong>pollute</strong> a lot. We propose that you set up an <strong>"air tax"</strong> to solve this problem. What do you think of that?',
         answers: [{
                 text: 'Yes, let\'s reduce pollution',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 3,
                         value: 0.1
@@ -1715,6 +1779,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s preserve purchasing power ',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -1745,9 +1810,10 @@ export const questions = [
     },
     {
         id: 28,
-        text: 'You have just discovered nuclear energy on the new planet. This will be of great benefit to your industries as well as to supply energy to the various households of your population. Would you like to use this technology?',
+        text: 'You have just discovered <strong>nuclear energy</strong>. This will be of great benefit to your industries and to your homes. Would you like to use this technology?',
         answers: [{
                 text: 'Yes, let\'s improve our industry',
+                icon: 'industry',
                 effects: [{
                         themeAffected: 9,
                         value: 0.1
@@ -1784,6 +1850,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s preserve the planet',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -1818,9 +1885,10 @@ export const questions = [
     },
     {
         id: 29,
-        text: 'Although the demand for motor vehicles is booming, car manufacturers are overwhelmed. The colony\'s engineers offer to provide support with robots that will allow them to help them carry heavier weights. What is your answer?',
+        text: 'Car manufacturers are overwhelmed. The colony\'s engineers propose to <strong>build robots</strong> to help them on a daily basis. What is your answer?',
         answers: [{
                 text: 'Yes, let\'s improve productivity with robots',
+                icon: 'building',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -1865,6 +1933,7 @@ export const questions = [
             },
             {
                 text: 'No, robotization will eliminate jobs ',
+                icon: 'lightbulb',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -1889,6 +1958,7 @@ export const questions = [
             },
             {
                 text: 'Let\'s make a compromise. 1 robot in support per team',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -1931,9 +2001,10 @@ export const questions = [
     },
     {
         id: 30,
-        text: 'A strike broke out on the planet: factory workers demanded more rest time and denounced gruelling working conditions. Do you think it is a good idea to reduce their working time by 2 hours per week?',
+        text: 'A strike broke out on the planet: factory workers are demanding more <strong>rest time</strong>. Do you think it is a good idea to <strong>reduce their working time</strong> by 2 hours per week?',
         answers: [{
                 text: 'Yes, let\'s avoid risking a revolt',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 3,
                         value: 0.1
@@ -1970,6 +2041,7 @@ export const questions = [
             },
             {
                 text: 'No, let us avoid creating an economic crisis',
+                icon: 'industry',
                 effects: [{
                         themeAffected: 4,
                         value: 0.1
@@ -1996,9 +2068,10 @@ export const questions = [
     },
     {
         id: 31,
-        text: 'The Ministry of Education found that students were wasting too much time writing with pens. Laptops are then offered to replace manual writing. Do you accept?',
+        text: 'The Andromeda League noticed that the students were <strong>counterproductive</strong> in the morning between 8am and 10am. Is it a good idea to <strong>postpone the students\' classes</strong> by 2 hours during the day?',
         answers: [{
                 text: 'Yes, let\'s set up computers to save time',
+                icon: 'school',
                 effects: [{
                         themeAffected: 4,
                         value: 0.1
@@ -2019,6 +2092,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s not waste new resources on making computers',
+                icon: 'briefcase-medical',
                 effects: [{
                         themeAffected: 8,
                         value: -0.1
@@ -2033,9 +2107,10 @@ export const questions = [
     },
     {
         id: 32,
-        text: 'The Andromeda League noticed that the students were counterproductive in the morning between 8am and 10am. Do you think it is a good idea to postpone the students\' classes by 2 hours during the day?',
+        text: 'Students waste too much time writing with pens. <strong>Laptops</strong> have recently been proposed to replace <strong>manual writing</strong>. Do you accept?',
         answers: [{
-                text: 'Yes, let\'s improve productivity',
+                text: 'Yes, let\'s create computers to save time',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 1,
                         value: 0.1
@@ -2067,7 +2142,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'No, let\'s keep staying on a model that works',
+                text: 'No, let\'s not waste new resources',
+                icon: 'tree',
                 effects: [{
                         themeAffected: 4,
                         value: 0.1
@@ -2094,16 +2170,17 @@ export const questions = [
     },
     {
         id: 33,
-        text: 'The Andromeda League has noticed that some students on your planet are having difficulty getting back to school. She suggests that you create buses that would pick up students every morning. Are you for or against?',
+        text: 'The Andromeda League has noticed that some students on your planet are having trouble getting back to school. Would you be willing to <strong>create buses</strong> for the students every morning?',
         answers: [{
                 text: 'Yes, let\'s improve access to school',
+                icon: 'couch',  
                 effects: [{
                         themeAffected: 1,
                         value: 0.1
                     },
                     {
                         themeAffected: 2,
-                        value: 0.1
+                        value: 0.1 
                     },
                     {
                         themeAffected: 7,
@@ -2128,7 +2205,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'No, let\'s avoid polluting the environment with new roads',
+                text: 'No, let\'s avoid new polluting roads',
+                icon: 'trash-alt',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -2163,9 +2241,10 @@ export const questions = [
     },
     {
         id: 34,
-        text: 'The economy is doing well! The opening of a new trade route with the Star League has allowed you to generate more revenue than usual. Three choices for improving your planet are available to you:',
+        text: 'Opening a <strong>new trade route</strong> with the Star League allows you to generate more revenue. <strong>Three choices for improving</strong> your planet are available to you:',
         answers: [{
                 text: 'Improving the industry',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 4,
                         value: 0.1
@@ -2190,6 +2269,7 @@ export const questions = [
             },
             {
                 text: 'Improving infrastructure',
+                icon: 'industry',
                 effects: [{
                         themeAffected: 5,
                         value: 0.1
@@ -2218,6 +2298,7 @@ export const questions = [
             },
             {
                 text: 'Improving health',
+                icon: 'briefcase-medical',
                 effects: [{
                         themeAffected: 10,
                         value: 0.1
@@ -2252,12 +2333,13 @@ export const questions = [
     },
     {
         id: 35,
-        text: 'The trade union confederation found that public transport was not comfortable enough. We suggest you to implement different new features to make them more pleasant. What do you want to do?',
+        text: '<strong>Public transport</strong> is not comfortable enough. We suggest you to implement different <strong>new features</strong> to make them more pleasant. What do you want to do?',
         answers: [{
                 text: 'Do not change the seats',
+                icon: 'lightbulb',
                 effects: [{
                         themeAffected: 0,
-                        value: -0.05
+                        value: 0.05
                     },
                     {
                         themeAffected: 4,
@@ -2279,6 +2361,7 @@ export const questions = [
             },
             {
                 text: 'Designing upholstered seats',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.05
@@ -2311,6 +2394,7 @@ export const questions = [
             },
             {
                 text: 'Introduce bunk beds',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -2345,9 +2429,10 @@ export const questions = [
     },
     {
         id: 36,
-        text: 'The population is exasperated by the number of working hours, which has only increased in recent months. The unions are asking the institutions to add 4 days of paid leave per year. What do you decide to do?',
+        text: 'The population is exasperated by the number of <strong>working hours</strong>. The unions are asking the institutions to add <strong>4 days of paid leave</strong> per year. What do you decide to do?',
         answers: [{
                 text: 'I accept claims to improve living comfort',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -2384,6 +2469,7 @@ export const questions = [
             },
             {
                 text: 'I do not accept claims to save the economy',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -2414,9 +2500,10 @@ export const questions = [
     },
     {
         id: 37,
-        text: 'A group of terrorists has just taken a group of settlers hostage. The area is difficult for your special forces to access, as terrorists are entrenched in the mountains. Which solution do you recommend?',
+        text: 'A group of terrorists has just taken a group of settlers <strong>hostage</strong>. The <strong>area is difficult</strong> for your special forces <strong>to access</strong>. Which solution do you recommend?',
         answers: [{
-                text: 'Ignore terrorists and hostage-taking so as not to slow down the economy',
+                text: 'Ignore terrorists so as not to slow down the economy',
+                icon: 'user-alt',
                 effects: [{
                         themeAffected: 6,
                         value: -0.1
@@ -2436,7 +2523,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'Engage in talks with terrorists to negotiate a rescue',
+                text: 'Negotiating with terrorists to save the hostages',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -2456,7 +2544,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'Invade the area with force and eliminate terrorists to eliminate the threat',
+                text: 'Invade the area with force and eliminate terrorists',
+                icon: 'user-alt',
                 effects: [{
                         themeAffected: 3,
                         value: 0.05
@@ -2491,9 +2580,10 @@ export const questions = [
     },
     {
         id: 38,
-        text: 'The Ministry of Health noted that people in each country were becoming increasingly ill. He suggests that you create a factory manufacturing drugs to improve the health of the population. To manufacture this plant, the destruction of 5000 trees is necessary. Do you authorize its construction?',
+        text: 'Your inhabitants are getting sicker and sicker. The creation of a <strong>drug factory</strong> would solve this problem but would require the <strong>destruction</strong> of 5000 trees. Do you agree with that?',
         answers: [{
                 text: 'Yes, let\'s make a drug factory',
+                icon: 'briefcase-medical',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -2530,6 +2620,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s save the trees',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -2564,9 +2655,10 @@ export const questions = [
     },
     {
         id: 39,
-        text: 'The Andromeda League and the Ministry of Health are short of money. They mentioned the possibility of abolishing health insurance in order to achieve greater savings. It is up to you to decide whether or not to confirm this decision.',
+        text: 'The Andromeda League and the Ministry of Health are short of money. <strong>Eliminating Health Insurance</strong> is one of the solutions proposed to achieve <strong>savings</strong>. Do you accept?',
         answers: [{
                 text: 'I accept the deletion to save money',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -2586,7 +2678,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'I refuse the deletion to continue to protect health',
+                text: 'I refuse. Health comes first and foremost',
+                icon: 'briefcase-medical',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -2609,9 +2702,10 @@ export const questions = [
     },
     {
         id: 40,
-        text: 'The Andromeda League has spent too much energy to help its colonies. It gives you the opportunity to install solar panels on your planet to fill the energy gap you were supposed to receive. What answer do you want to give them?',
+        text: 'Your colony <strong>lacks energy</strong>. Do you want to install solar panels on your planet to <strong>collect more</strong> of this resource?',
         answers: [{
-                text: 'There will be no installation',
+                text: 'No, there will be no installation',
+                icon: 'industry',
                 effects: [{
                         themeAffected: 0,
                         value: -0.05
@@ -2631,7 +2725,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'Installation on 50% of the planet',
+                text: 'Install panels on 50% of the planet',
+                icon: 'bolt',
                 effects: [{
                         themeAffected: 0,
                         value: 0.05
@@ -2659,7 +2754,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'Installation globale',
+                text: 'Install panels all over the planet',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -2690,9 +2786,10 @@ export const questions = [
     },
     {
         id: 41,
-        text: 'The peoples of your colony wish to build walls to delimit the boundaries between each ethnic group. If their demands are met, people who wish to visit another ethnic group would have to be charged. Are you for or against?',
+        text: 'Your colony wants to build walls to delimit the <strong>boundaries</strong> between each ethnic group. Thanks to customs, it would then be possible to <strong>charge for travel</strong> in these areas. Are you for or against?',
         answers: [{
                 text: 'For the establishment of borders',
+                icon: 'user-alt',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -2717,6 +2814,7 @@ export const questions = [
             },
             {
                 text: 'Against the establishment of borders',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -2743,9 +2841,10 @@ export const questions = [
     },
     {
         id: 42,
-        text: 'The transatlantic and oceanic line cannot communicate. We propose that you build a bridge that would connect the two federations and thus promote exchanges, although this is not essential. What are you doing? What are you doing?',
+        text: 'The transatlantic and oceanic lines cannot <strong>communicate</strong>. The construction of an airport would link the two federations and promote trade. What are you doing? What are you doing?',
         answers: [{
-                text: 'I am building a bridge to promote exchanges',
+                text: 'I am building an airport to promote trade',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -2777,7 +2876,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'I refuse to build a bridge because there is no need for it',
+                text: 'I refuse, it\'s not an urgent need',
+                icon: 'truck-loading',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -2812,9 +2912,10 @@ export const questions = [
     },
     {
         id: 43,
-        text: 'You are given the opportunity to fund a team of researchers to explore the seabed to measure the space that could be dedicated to the creation of an underwater city. Do you accept?',
+        text: 'A team of researchers wants to explore the underwater world. They are looking at whether it would be possible to create an <strong>underwater city</strong>. Do you agree to finance the expedition?',
         answers: [{
-                text: 'I agree to fund the research team',
+                text: 'I accept, we must solve the problems of overcrowding',
+                icon: 'user-alt',
                 effects: [{
                         themeAffected: 7,
                         value: 0.1
@@ -2843,7 +2944,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'I refuse to fund the research team',
+                text: 'I refuse, it\'s not an urgent need',
+                icon: 'water',
                 effects: [{
                         themeAffected: 7,
                         value: -0.1
@@ -2866,9 +2968,10 @@ export const questions = [
     },
     {
         id: 44,
-        text: 'We give you the possibility to build a high-performance wind antenna, allowing you to no longer pay for electricity. Do you accept? ',
+        text: 'You are given the opportunity to <strong>build</strong> a high-performance wind antenna, which would <strong>eliminate</strong> the need to pay for electricity. Do you accept?',
         answers: [{
                 text: 'Yes, let\'s save electricity',
+                icon: 'bolt',
                 effects: [{
                         themeAffected: 2,
                         value: -0.1
@@ -2885,6 +2988,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s not reduce the comfort of life',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -2903,9 +3007,10 @@ export const questions = [
     },
     {
         id: 45,
-        text: 'The Andromeda League proposes to produce phones without entertainment applications. This would improve the concentration of employees in the office. Do you think that\'s a good idea?',
+        text: 'The Andromeda League proposes to create <strong>phones without entertainment applications</strong>. The idea would be to be able to <strong>improve</strong> the concentration of employees in the office. What do you think of that?',
         answers: [{
                 text: 'Yes, let\'s improve labour productivity',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 0,
                         value: 0.05
@@ -2930,6 +3035,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s not cause a social crisis',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 0,
                         value: -0.05
@@ -2956,9 +3062,10 @@ export const questions = [
     },
     {
         id: 46,
-        text: 'The company rebels against the government and criticizes the lack of wages. The authorities propose to increase the populations\' salaries by 10%, but in return, the populations must agree to work 5 additional hours per week. As Supreme Leader, do you accept the institutions\' proposal?',
+        text: 'Due to recent demonstrations, the authorities are proposing to <strong>increase people\'s salaries</strong> by 10%. In return, employees <strong>will have to work 5 more hours</strong> per week. Do you accept?',
         answers: [{
                 text: 'Yes, let\'s make a compromise.',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -2987,6 +3094,7 @@ export const questions = [
             },
             {
                 text: 'No, the compromise is not balanced',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -3017,9 +3125,10 @@ export const questions = [
     },
     {
         id: 47,
-        text: 'The Galactic Union noted that the satisfaction level of the people living on your planet was not high enough. Do you think that the construction of an amusement park in the most populated area of your colony could solve this problem?',
+        text: 'We propose that you build an airport to <strong>improve traffic flow</strong>. On the other hand, 20% of the population would be disturbed by <strong>construction work</strong>. Which solution does it seem most appropriate to you?',
         answers: [{
-                text: 'Yes, it would help to satisfy public order',
+                text: 'Do not build the airport. The inhabitants will not be disturbed',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -3059,7 +3168,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'No, it will bring down the economy',
+                text: 'Build the airport very quickly, but with a lot of resources',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -3102,9 +3212,10 @@ export const questions = [
     },
     {
         id: 48,
-        text: 'You have the possibility of building an airport that would facilitate exchanges and travel. As a result, 20% of the population would be impacted over a period of 2 years due to construction work. Which solution does it seem most appropriate to you?',
+        text: 'The <strong>satisfaction level</strong> of the people living on your planet is not high enough. Do you think that the construction of an <strong>amusement park</strong> could solve this problem?',
         answers: [{
-                text: 'Do not build the airport to spare the population',
+                text: 'Yes, it would help to satisfy public order',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -3136,55 +3247,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'Build the airport to improve travel',
-                effects: [{
-                        themeAffected: 0,
-                        value: 0.1
-                    },
-                    {
-                        themeAffected: 4,
-                        value: 0.1
-                    },
-                    {
-                        themeAffected: 2,
-                        value: 0.1
-                    },
-                    {
-                        themeAffected: 5,
-                        value: 0.1
-                    },
-                    {
-                        themeAffected: 10,
-                        value: -0.1
-                    },
-                    {
-                        themeAffected: 11,
-                        value: -0.1
-                    },
-                    {
-                        themeAffected: 8,
-                        value: 0.1
-                    },
-                    {
-                        themeAffected: 3,
-                        value: -0.05
-                    },
-                    {
-                        themeAffected: 13,
-                        value: -0.05
-                    },
-                    {
-                        themeAffected: 14,
-                        value: -0.1
-                    },
-                    {
-                        themeAffected: 8,
-                        value: -0.1
-                    }
-                ]
-            },
-            {
-                text: 'Build the airport in record time but very resource-intensive',
+                text: 'No, it will bring down the economy',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: -0.05
@@ -3227,9 +3291,10 @@ export const questions = [
     },
     {
         id: 49,
-        text: 'The Andromeda League has just received subsidies from the colonies of other solar systems. In order to distribute these new earnings fairly, you are given the opportunity to use these funds for your own colony or not to accept them.',
+        text: 'The Andromeda League has received <strong>surplus</strong> financial assistance. It gives you the <strong>possibility</strong> to use these funds for your own colony or not to accept them.',
         answers: [{
-                text: 'I agree to use this new funding, it will help the colony',
+                text: 'I agree, it will help the colony',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -3258,6 +3323,7 @@ export const questions = [
             },
             {
                 text: 'No, pollution will increase if we invest more in industry',
+                icon: 'industry',
                 effects: [{
                         themeAffected: 8,
                         value: 0.05
@@ -3285,9 +3351,10 @@ export const questions = [
     },
     {
         id: 50,
-        text: 'You have the possibility to create a virtual cryptocurrency allowing the fluidification of exchanges between populations. The currency would work thanks to blockchain technology. What do you decide?',
+        text: 'You have the <strong>possibility</strong> to create a virtual cryptocurrency: this would speed up financial exchanges. What do you decide?',
         answers: [{
                 text: 'I authorize the creation of cryptocurrency',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -3308,6 +3375,7 @@ export const questions = [
             },
             {
                 text: 'I do not authorize the creation of cryptocurrency ',
+                icon: 'lightbulb',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -3330,9 +3398,10 @@ export const questions = [
     },
     {
         id: 51,
-        text: 'The Ministry of Finance has found that many people do not declare their wealth to the Andromeda League. You have the possibility to set up "PayRobot", a high-performance algorithm that is nevertheless very energy-intensive. Does it seem appropriate to you to implement this algorithm?',
+        text: 'You have the option of implementing an <strong>algorithm</strong> that would prevent people from cheating when they report their <strong>income</strong>. Do you authorize its creation?',
         answers: [{
                 text: 'Yes, it will improve the economy',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -3357,6 +3426,7 @@ export const questions = [
             },
             {
                 text: 'No, it will pollute the planet more',
+                icon: 'trash-alt',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -3383,9 +3453,10 @@ export const questions = [
     },
     {
         id: 52,
-        text: 'X-ZTY cars have just been introduced. Equipped with a hypersonic engine, they allow you to accelerate your journey to other planets. Their release could be beneficial to your colony\'s trade, but will also bring several disadvantages. What do you choose?',
+        text: 'X-ZTY cars have just been introduced. Their release could be <strong>beneficial</strong> to your colony\'s trade, but it would also bring several <strong>disadvantages</strong>. What do you choose?',
         answers: [{
                 text: 'sell X-ZTY cars',
+                icon: 'lightbulb',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -3418,6 +3489,7 @@ export const questions = [
             },
             {
                 text: 'Do not sell X-ZTY cars',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 12,
                         value: 0.1
@@ -3460,9 +3532,10 @@ export const questions = [
     },
     {
         id: 53,
-        text: 'If there is one thing you hate, it is to see industrial production slow down. However, in recent months, the colonial labour confederation has not succeeded in stopping the risks of technical failures that have affected the majority of your factories. Consequence: you must find a solution as soon as possible to save global production. What do you choose?',
+        text: 'Technical failures have recently affected the majority of your plants. You must therefore <strong>find a solution</strong> as soon as possible to save global production. What do you choose?',
         answers: [{
                 text: 'I\'m increasing the workers\' wages',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -3495,6 +3568,7 @@ export const questions = [
             },
             {
                 text: 'I ask for help from the banks of the Andromeda League',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 6,
                         value: 0.1
@@ -3531,6 +3605,7 @@ export const questions = [
             },
             {
                 text: 'I make layoffs to save the economy',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -3561,9 +3636,10 @@ export const questions = [
     },
     {
         id: 54,
-        text: 'The Andromeda League noticed that flying cars were losing too much fuel by getting stuck in the "control zone". We propose the installation of an automatic controller that would allow traffic to flow more smoothly. Do you think this is good for the planet?',
+        text: 'Flying cars in your colony tend <strong>to slow down</strong> too much at tolls. We suggest that you install an automatic <strong>controller</strong> to make traffic flow more smoothly. What do you think of that?',
         answers: [{
                 text: 'Yes, it will only bring advantages',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -3596,6 +3672,7 @@ export const questions = [
             },
             {
                 text: 'No, pollution will increase otherwise',
+                icon: 'trash-alt',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -3630,9 +3707,10 @@ export const questions = [
     },
     {
         id: 55,
-        text: 'The Andromeda League wants to revive education on the planet. Several proposals for improvement are proposed, such as the robotization of teaching. What are you doing? What are you doing?',
+        text: 'The Andromeda League wants to <strong>revive education</strong> on the planet. Several proposals for improvement are proposed, such as the <strong>robotization</strong> of teaching. What are you doing? What are you doing?',
         answers: [{
                 text: 'Accept the proposal to promote education',
+                icon: 'school',
                 effects: [{
                         themeAffected: 1,
                         value: 0.1
@@ -3649,6 +3727,7 @@ export const questions = [
             },
             {
                 text: 'Let\'s reject robotization to avoid creating more pollution',
+                icon: 'lightbulb',
                 effects: [{
                         themeAffected: 8,
                         value: 0.05
@@ -3671,9 +3750,10 @@ export const questions = [
     },
     {
         id: 56,
-        text: 'A new distance education system has emerged. Thanks to the evolution of technology, the colony\'s scientists are now able to use the planet\'s energy to broadcast the courses live. The army is also beginning to take an interest in this technology. What do you choose to do?',
+        text: 'It is now possible to use the planet\'s <strong>energy</strong> to <strong>broadcast</strong> schoolyards live. The army is also beginning to take an interest in this technology. What do you choose to do?',
         answers: [{
                 text: 'I agree with this decision, it will help education',
+                icon: 'school',
                 effects: [{
                         themeAffected: 1,
                         value: 0.1
@@ -3714,6 +3794,7 @@ export const questions = [
             },
             {
                 text: 'I refuse this decision, there will be an energy saturation otherwise',
+                icon: 'bolt',
                 effects: [{
                         themeAffected: 9,
                         value: 0.1
@@ -3756,9 +3837,10 @@ export const questions = [
     },
     {
         id: 57,
-        text: 'The Ministry of Education noted that 20% of students were in academic failure. To solve this problem, the Council proposes to create accompanying robots that would help with tutoring. Would you like to set up these robots?',
+        text: 'The Ministry of Education noted that 20% of students were in <strong>academic failure</strong>. <strong>Robots to help</strong> with tutoring are available. Would you like to set up these robots?',
         answers: [{
                 text: 'Yes, let us promote the education system',
+                icon: 'school',
                 effects: [{
                         themeAffected: 1,
                         value: 0.05
@@ -3791,6 +3873,7 @@ export const questions = [
             },
             {
                 text: 'No, robot production will harm the environment',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -3821,9 +3904,10 @@ export const questions = [
     },
     {
         id: 58,
-        text: 'You are in the position to produce Boeing3000 aircraft. These aircraft of the future could travel at a lightning speed but have the disadvantage of being much more polluting than current trains. On the other hand, it would increase the speed of travel. What do you decide?',
+        text: 'The Boeing3000 can travel at a <strong>blistering speed</strong> but has the disadvantage of being much more <strong>polluting</strong> than current trains. Do you authorize their commercialization?',
         answers: [{
                 text: 'I accept the production of the Boeing3000',
+                icon: 'lightbulb',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -3860,6 +3944,7 @@ export const questions = [
             },
             {
                 text: 'I do not accept the production of the Boeing3000',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -3898,9 +3983,10 @@ export const questions = [
     },
     {
         id: 59,
-        text: 'Phalene skin is used to make comfortable clothing. Only, it is an endangered animal. Recently, your researchers hypothesized that there would be other phalens in the solar system. The extinction of this animal species on your planet could thus continue without risking a stock shortage throughout the galaxy. What do you decide?',
+        text: 'The phalène is an endangered animal on your planet. However, there are others in the solar system. Do you allow the <strong>extinction</strong> of the phalène on your planet?',
         answers: [{
-                text: 'You prohibit hunters from continuing to hunt the phalène and you create a protected species status',
+                text: 'No, let\'s create a protected species status',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 12,
                         value: 0.1
@@ -3936,7 +4022,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'You let your colony\'s phalène die and start funding an expedition to find the same species',
+                text: 'Yes, there will always be others elsewhere',
+                icon: 'tree',
                 effects: [{
                         themeAffected: 7,
                         value: 0.05
@@ -3979,9 +4066,10 @@ export const questions = [
     },
     {
         id: 60,
-        text: 'The journey between the oceanic and transatlantic line takes too long. You have the possibility to reduce the travel time by two by building a bridge. As a result, the world economy would be more efficient because it would be faster, but construction would require a certain energy cost. Which solution does it seem most appropriate to you?',
+        text: 'The journey between the oceanic and transatlantic line takes too long. <strong>A bridge</strong> could solve this problem, but would require a certain cost. What do you want to do?',
         answers: [{
                 text: 'Yes, let\'s reduce travel time',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -4022,6 +4110,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s not reduce travel time',
+                icon: 'trash-alt',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -4064,9 +4153,10 @@ export const questions = [
     },
     {
         id: 61,
-        text: 'Knowing that your planet is beginning to become overcrowded, you have the possibility of contaminating part of the population with the "lethal" bacteria to reduce the population explosion. Do you accept?',
+        text: 'Knowing that your planet is beginning to become overcrowded, you have the possibility of <strong>contaminating</strong> part of the population with the "lethal" <strong>bacteria</strong> to reduce the population explosion. Do you accept?',
         answers: [{
                 text: 'I accept the spread of a bacterium',
+                icon: 'user-alt',
                 effects: [{
                         themeAffected: 14,
                         value: 0.1
@@ -4087,6 +4177,7 @@ export const questions = [
             },
             {
                 text: 'I do not accept the spread of bacteria',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 2,
                         value: 0.1
@@ -4109,9 +4200,10 @@ export const questions = [
     },
     {
         id: 62,
-        text: 'Scientists have recently found a way to revive the ancient animal species that once inhabited your planet! Educational and scientific institutions are in turmoil, while animal associations and religious communities are concerned about the risks involved in this decision. What do you recommend?',
+        text: 'Scientists have found a way to <strong>revive</strong> the planet\'s ancient animal species! However, this does not please animal and religious associations, which remain opposed to this idea. What do you recommend?',
         answers: [{
-                text: 'Authorize the resurrection and garrison of creatures in museums',
+                text: 'Allow the resurrection of creatures',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -4135,7 +4227,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'Do not allow resurrection to avoid further conflict',
+                text: 'Not allowing resurrection',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 6,
                         value: 0.1
@@ -4166,9 +4259,10 @@ export const questions = [
     },
     {
         id: 63,
-        text: 'The general performance of the populations in the factories is too low. We propose the implementation of a chip that multiplies the performance of employees by 4. However, it would have negative long-term effects. Would you like to set it up?',
+        text: 'We propose the implementation of a <strong>chip</strong> that multiplies the performance of employees by 4. However, it would have <strong>negative long-term effects</strong>. Would you like to set it up?',
         answers: [{
                 text: 'Yes, work growth cannot be put aside',
+                icon: 'industry',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -4209,6 +4303,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s avoid creating more social conflicts',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -4251,9 +4346,10 @@ export const questions = [
     },
     {
         id: 64,
-        text: 'You have the possibility to create a "LoopH" supersonic train that will allow your population to move much faster and therefore save time. Do you authorize its creation?',
+        text: 'You have the possibility to create a "<strong>LoopH</strong>" supersonic train that will allow your population to move <strong>much faster</strong> and therefore save time. Do you authorize its creation?',
         answers: [{
                 text: 'I agree to the train being put into service',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 3,
                         value: 0.1
@@ -4282,6 +4378,7 @@ export const questions = [
             },
             {
                 text: 'I do not accept the train to be put into service',
+                icon: 'truck-loading',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -4312,9 +4409,10 @@ export const questions = [
     },
     {
         id: 65,
-        text: 'Following new waves of migration, you discover that you cannot accommodate all the new settlers on your planet. What to do about it?',
+        text: 'Following new waves of <strong>migration</strong>, you discover that you cannot <strong>accommodate</strong> all the new settlers on your planet. What to do about it?',
         answers: [{
                 text: 'Place half of the colony in low-cost prefabricated buildings',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 7,
                         value: 0.05
@@ -4342,7 +4440,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'Ensure that all your population is housed',
+                text: 'Ensure that the entire population is housed',
+                icon: 'building',
                 effects: [{
                         themeAffected: 6,
                         value: 0.1
@@ -4385,9 +4484,10 @@ export const questions = [
     },
     {
         id: 66,
-        text: 'The Andromeda Ligue wishes to entertain its inhabitants by building a 7D cinema. This construction will be very expensive in terms of energy and resources, but these facilities are worth it because it will generate benefits. Do you think that\'s a good idea?',
+        text: 'The Andromeda League wishes to entertain its inhabitants by building a 7D cinema. This construction will be very <strong>expensive</strong> but will generate <strong>benefits</strong>. Do you think that\'s a good idea?',
         answers: [{
                 text: 'Yes, let\'s improve the comfort of the population',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -4432,6 +4532,7 @@ export const questions = [
             },
             {
                 text: 'No, let\'s avoid consuming new resources',
+                icon: 'industry',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -4482,9 +4583,10 @@ export const questions = [
     },
     {
         id: 67,
-        text: 'A new teleportation technology has just been invented. This allows the user to move instantly to another place on the planet. As a terra-selector, you have enough money to buy the license and market it to make it easier for your settlers to move around. Do you accept?',
+        text: 'A new teleportation technology has just been <strong>invented</strong>. You have enough money to buy the license and <strong>market it</strong> to make it easier for your settlers to move around. Do you accept?',
         answers: [{
                 text: 'I accept, it will improve the comfort of life',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 7,
                         value: 0.1
@@ -4509,6 +4611,7 @@ export const questions = [
             },
             {
                 text: 'No, we don\'t know if this technology is reliable',
+                icon: 'lightbulb',
                 effects: [{
                         themeAffected: 7,
                         value: -0.1
@@ -4535,9 +4638,10 @@ export const questions = [
     },
     {
         id: 68,
-        text: 'Thanks to recent technological advances, you are given the opportunity to transform some people into trees with the "anthropomorphium" pill. Although many people would regret seeing their loved ones turn into trees, environmental institutions would be delighted to be able to allow the planet to breathe more. Are you interested?',
+        text: 'The "<strong>anthropomorphium</strong>" pill makes it possible to transform <strong>humans</strong> into <strong>trees</strong>. Environmental institutions would be delighted to be able to allow the planet to breathe more. Are you interested?',
         answers: [{
-                text: 'I agree to turn people into trees',
+                text: 'Yes, it will help the environment',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 14,
                         value: 0.05
@@ -4553,7 +4657,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'I don\'t accept to turn people into trees',
+                text: 'No, it will create conflicts',
+                icon: 'user-alt',
                 effects: [{
                         themeAffected: 14,
                         value: -0.05
@@ -4563,8 +4668,8 @@ export const questions = [
                         value: -0.05
                     },
                     {
-                        themeAffected: 8,
-                        value: -0.05
+                        themeAffected: 10,
+                        value: 0.05
                     }
                 ]
             }
@@ -4572,9 +4677,10 @@ export const questions = [
     },
     {
         id: 69,
-        text: 'Artificial intelligence is at its peak. We propose to replace 20% of the population with high-performance robots. Do you accept?',
+        text: 'Artificial intelligence is at its peak. We propose to <strong>replace</strong> 20% of the population with high-performance robots. Do you accept?',
         answers: [{
-                text: 'Yes, let\'s replace part of the population. This will increase productivity',
+                text: 'Yes, it will increase productivity',
+                icon: 'industry',
                 effects: [{
                         themeAffected: 7,
                         value: 0.1
@@ -4611,6 +4717,7 @@ export const questions = [
             },
             {
                 text: 'No, let us preserve existing jobs',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 6,
                         value: 0.1
@@ -4653,9 +4760,10 @@ export const questions = [
     },
     {
         id: 70,
-        text: 'We propose to create drones that allow the population to send packages at a light speed. On the other hand, the production of drones has the particularity of consuming a lot of energy. Do you think that\'s a good idea?',
+        text: 'We propose you to create drones that would allow you to <strong>send packages</strong> at a light speed. On the other hand, their production would consume <strong>a lot of energy</strong>. Do you think that\'s a good idea?',
         answers: [{
-                text: 'I accept, this new technology will improve everyone\'s comfort',
+                text: 'I accept, it will improve everyone\'s comfort',
+                icon: 'lightbulb',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -4675,7 +4783,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'I refuse, this excess energy will have a negative impact on the planet',
+                text: 'I refuse, it will consume a lot of energy',
+                icon: 'bolt',
                 effects: [{
                         themeAffected: 8,
                         value: 0.1
@@ -4698,9 +4807,10 @@ export const questions = [
     },
     {
         id: 71,
-        text: 'The Colonial Security Department has found that a new drug is spreading around the world. This arouses the interest of the population but also the mistrust of health institutes. The police want to take it but can no longer get their hands on it, and beg for your help. What answer do you give them?',
+        text: 'A new <strong>drug</strong> that has arrived on your planet has aroused the <strong>interest</strong> of the population but also the <strong>mistrust</strong> of health institutes. The police want to take it, but they don\'t have enough money. What answer do you give them?',
         answers: [{
-                text: 'I\'m developing the police budget to allow them to intercept this drug',
+                text: 'I\'m developing the police budget',
+                icon: 'briefcase-medical',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -4732,7 +4842,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'I decide to help the police only after the scientific institutes have proven that this drug is destructive',
+                text: 'I only intervene if studies show that this drug is destructive',
+                icon: 'industry',
                 effects: [{
                         themeAffected: 0,
                         value: 0.05
@@ -4764,7 +4875,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'I let the drugs spread because the population appreciates them and the economy is doing well',
+                text: 'I\'m not doing anything, because the population appreciates it and the economy is doing well',
+                icon: 'couch',
                 effects: [{
                         themeAffected: 0,
                         value: 0.1
@@ -4799,9 +4911,10 @@ export const questions = [
     },
     {
         id: 72,
-        text: 'A war has just broken out between the two most powerful countries on your planet. The inhabitants are no longer safe and the company is threatening to explode. The Andromeda League is trying to resolve this situation and is asking you to take action. What do you decide?',
+        text: 'A <strong>war</strong> has just broken out between the two most powerful countries on your planet. The inhabitants are no longer safe. The Andromeda League is trying to <strong>resolve</strong> this situation and is asking you to take action. What do you decide?',
         answers: [{
-                text: 'I authorize the Andromeda League to deploy an army to restore the situation',
+                text: 'I ask the army of the Andromeda League to intervene',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 0,
                         value: -0.1
@@ -4821,7 +4934,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'I launch a nuclear attack to force warring countries to stop',
+                text: 'I launch a nuclear attack',
+                icon: 'leaf',
                 effects: [{
                         themeAffected: 10,
                         value: -0.1
@@ -4861,7 +4975,8 @@ export const questions = [
                 ]
             },
             {
-                text: 'I am organizing a massive exodus to allow the population to flee the war',
+                text: 'I\'m organizing a massive exodus for the population',
+                icon: 'user-alt',
                 effects: [{
                         themeAffected: 10,
                         value: 0.1
@@ -4888,9 +5003,10 @@ export const questions = [
     },
     {
         id: 73,
-        text: 'The teleportation has just arrived on the market. However, this technology remains very expensive and is only accessible to a small part of the population. Do you want to put it in place? ',
+        text: 'The <strong>teleportation</strong> has just arrived on the market. However, this technology remains very <strong>expensive</strong> and is only accessible to a small part of the population. Do you want to put it in place?',
         answers: [{
                 text: 'Yes, society will benefit greatly from it',
+                icon: 'coins',
                 effects: [{
                         themeAffected: 0,
                         value: 0.05
@@ -4919,6 +5035,7 @@ export const questions = [
             },
             {
                 text: 'No, it will still cost money',
+                icon: 'theater-masks',
                 effects: [{
                         themeAffected: 0,
                         value: -0.05
