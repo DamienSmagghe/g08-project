@@ -38,7 +38,7 @@ export default class Planet
 
         // Scene
         this.scene = new THREE.Scene()
-
+        this.scene.autoUpdate = true
         // Renderer
         this.renderer = new THREE.WebGLRenderer( { alpha: true } )
 
@@ -80,17 +80,19 @@ export default class Planet
         {
             amount: 100000,
             particleSize: 0.15,
-            color: 0xff2222,
+            color: 0xC2D5FF,
             radius: 20,
-            get: false
+            get: false,
+            name: 'kernel'
         }
         this.surfaceProps =
         {
           amount: 100000,
           particleSize: 0.15,
-          color: 0xff7979,
+          color: 0xD4E1FE,
           radius: 50,
-          get: false
+          get: false,
+          name: 'surface'
         }
         this.atmosphereProps =
         {
@@ -98,7 +100,8 @@ export default class Planet
           particleSize: 0.15,
           color: 0xf3eed9,
           radius: 60,
-          get: false
+          get: false,
+          name: 'atmosphere'
         }
         this.sateliteProps =
         {
@@ -106,16 +109,17 @@ export default class Planet
             particleSize: 0.05,
             color: 0xffffff,
             radius: 64,
-            get: true
+            get: true,
+            name: 'satelite'
         }
 
         /**
          * Animate
          */
-        this.createParticles(this.kernelProps.amount, this.kernelProps.particleSize, this.kernelProps.color, this.kernelProps.radius, this.kernelProps.get)
-        this.createParticles(this.surfaceProps.amount, this.surfaceProps.particleSize, this.surfaceProps.color, this.surfaceProps.radius, this.surfaceProps.get)
-        this.createParticles(this.atmosphereProps.amount, this.atmosphereProps.particleSize, this.atmosphereProps.color, this.atmosphereProps.radius, this.atmosphereProps.get)
-        this.satelite = this.createParticles(this.sateliteProps.amount, this.sateliteProps.particleSize, this.sateliteProps.color, this.sateliteProps.radius, this.sateliteProps.get)
+        this.kernel = this.createParticles(this.kernelProps)
+        this.surface = this.createParticles(this.surfaceProps)
+        this.atmosphere = this.createParticles(this.atmosphereProps)
+        this.satelite = this.createParticles(this.sateliteProps)
 
         this.loop = this.loop.bind(this)
         this.loop()
@@ -175,14 +179,14 @@ export default class Planet
     //     }
     // }
 
-    createParticles(_amount, _particleSize, _color, _radius, _isGet)
+    createParticles(_object)
     {
         this.planet = new THREE.BufferGeometry()
         this.pos = []
 
-        for(let i = 0; i < _amount; i++)
+        for(let i = 0; i < _object.amount; i++)
         {
-            this.vertex = this.randParticles(_radius)
+            this.vertex = this.randParticles(_object.radius)
             this.pos.push(this.vertex.x, this.vertex.y, this.vertex.z)
         }
         this.planet.addAttribute('position', new THREE.Float32BufferAttribute(this.pos, 3))
@@ -191,17 +195,17 @@ export default class Planet
 
         this.material = new THREE.PointsMaterial(
             {
-                color: _color,
-                size: _particleSize,
+                color: _object.color,
+                size: _object.particleSize,
                 // map: this.texture,
                 blending: THREE.AdditiveBlending 
             }
         )
         this.material.depthTest = false
         this.particles = new THREE.Points(this.planet, this.material)
+        this.particles.name = _object.name
 
-        this.scene.add(this.particles)
-        if(_isGet) {return this.particles}
+        return this.particles
     }
 
     rotateObject(_object, _xSpeed, _ySpeed)
@@ -245,7 +249,7 @@ export default class Planet
     loop()
     {
         requestAnimationFrame(this.loop)
-        this.rotateObject(this.satelite, 0, -0.003)
+        // this.rotateObject(this.satelite, 0, -0.003)
         this.update()
         this.render()
     }

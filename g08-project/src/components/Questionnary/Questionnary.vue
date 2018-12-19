@@ -20,6 +20,10 @@
     import Questions from './Questions.vue'
     import Era from './Era.vue'
     import {
+        planet
+    } from './storePlanet.js'
+    
+    import {
         questions
     } from './questions.js'
     import {
@@ -46,7 +50,11 @@
             }
         },
         mounted() {
-            const planet = new Planet(document.querySelector('.planet__container'))
+            planet.planet = new Planet(document.querySelector('.planet__container'))
+            planet.planet.scene.add(planet.planet.kernel)
+            planet.planet.scene.add(planet.planet.surface)
+            planet.planet.scene.add(planet.planet.atmosphere)
+            planet.planet.scene.add(planet.planet.satelite)
         },
         computed: {
             era() {
@@ -61,6 +69,7 @@
         },
         methods: {
             updateGauge() {
+                this.updatePlanet()
                 this.questionId++
                     if (this.questionId >= 25) {
                         this.$emit('end')
@@ -72,6 +81,68 @@
                     this.isLosing = true
                     this.$emit('end')
                 }
+            },
+            
+            changeColor(_value) {
+                this.color = new THREE.Color()
+                this.red = new THREE.Color(0xff3333)
+                this.blue = new THREE.Color(0x3399ff)
+                this.white = new THREE.Color(0xffffff)
+
+                switch (_value) {
+                    case _vale >= 0 || _value < 0.5:
+                        this.color.lerp(this.red)
+                        return this.color
+                    case _vale == 0.5:
+                        this.color.lerp(this.white)
+                        return this.color
+                    case _vale >= 0.5 || _value < 1:
+                        this.color.lerp(this.blue)
+                        return this.color
+                }
+            },
+            
+            updatePlanet() {
+                planet.planet.scene.remove(planet.planet.scene.getObjectByName(planet.planet.kernel.name))
+                planet.planet.scene.remove(planet.planet.scene.getObjectByName(planet.planet.surface.name))
+                planet.planet.scene.remove(planet.planet.scene.getObjectByName(planet.planet.atmosphere.name))
+                planet.planet.scene.remove(planet.planet.scene.getObjectByName(planet.planet.satelite.name))
+    
+                planet.planet.kernel = planet.planet.createParticles({
+                    amount: 100000,
+                    particleSize: 0.15,
+                    color: 0xff0000,
+                    radius: 20,
+                    name: 'kernel'
+                })
+                planet.planet.surface = planet.planet.createParticles({
+                    amount: 100000,
+                    particleSize: 0.15,
+                    color: 0xD4E1FE, //
+                    radius: 50,
+                    get: false,
+                    name: 'surface'
+                })
+                planet.planet.atmosphere = planet.planet.createParticles({
+                    amount: 5000,
+                    particleSize: 0.15,
+                    color: 0xf3eed9, //
+                    radius: 60,
+                    get: false,
+                    name: 'atmosphere'
+                })
+                planet.planet.satelite = planet.planet.createParticles({
+                    amount: 1000,
+                    particleSize: 0.05,
+                    color: 0xffffff,
+                    radius: 64,
+                    name: 'satelite'
+                })
+    
+                planet.planet.scene.add(planet.planet.kernel)
+                planet.planet.scene.add(planet.planet.surface)
+                planet.planet.scene.add(planet.planet.atmosphere)
+                planet.planet.scene.add(planet.planet.satelite)
             }
         }
     }
@@ -99,6 +170,7 @@
         margin: 20px;
         height: 100%;
     }
+    
     .planet__container {
         position: absolute;
         top: 0;
@@ -107,7 +179,7 @@
         width: 100vw;
         height: 100vh;
     }
-
+    
     .planet__container>canvas {
         width: 100vw;
         height: 100vh;

@@ -49,8 +49,8 @@
             nextQuestion() {
                 for (let i = 0; i < this.effect.length; i++) {
                     affectThemes[this.effect[i].themeAffected].value += this.effect[i].value
-                    if(affectThemes[this.effect[i].themeAffected].value <= 0) {
-                        affectThemes[this.effect[i].themeAffected].value = 0
+                    if(affectThemes[this.effect[i].themeAffected].value <= 0.5) {
+                        affectThemes[this.effect[i].themeAffected].value = 0.5
                     }
                 }
     
