@@ -62,7 +62,7 @@
         methods: {
             updateGauge() {
                 this.questionId++
-                    if (this.questionId >= 73) {
+                    if (this.questionId >= 25) {
                         this.$emit('end')
                     }
                 this.dataEarthViability = earthViability.value

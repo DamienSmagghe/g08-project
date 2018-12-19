@@ -49,6 +49,9 @@
             nextQuestion() {
                 for (let i = 0; i < this.effect.length; i++) {
                     affectThemes[this.effect[i].themeAffected].value += this.effect[i].value
+                    if(affectThemes[this.effect[i].themeAffected].value <= 0) {
+                        affectThemes[this.effect[i].themeAffected].value = 0
+                    }
                 }
     
                 let populationAverage = 0
@@ -68,8 +71,14 @@
                 if (earthViability.value > 1) {
                     earthViability.value = 1
                 }
+                if (earthViability.value <= 0) {
+                    earthViability.value = 0
+                }
                 if (populationViability.value > 1) {
                     populationViability.value = 1
+                }
+                if (populationViability.value <= 0) {
+                    populationViability.value = 0
                 }
     
                 this.$emit('updateViabilities')
