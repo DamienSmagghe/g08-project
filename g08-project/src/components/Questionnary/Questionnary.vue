@@ -106,6 +106,12 @@
         width: 100vw;
         height: 100vh;
     }
+
+    .planet__container>canvas {
+        width: 100vw;
+        height: 100vh;
+    }
+    
     .questionnary {
         width: 100vw;
         height: 100vh;

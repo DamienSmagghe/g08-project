@@ -12,6 +12,8 @@ export default class Planet
             width: this.$container.offsetWidth,
             height: this.$container.offsetHeight
         }
+        this.image = null
+        this.texture = null
 
         /**
          * THREE JS
@@ -32,6 +34,7 @@ export default class Planet
             this.cameraProps.near,
             this.cameraProps.far
         )
+        this.initCamera()
 
         // Scene
         this.scene = new THREE.Scene()
@@ -62,33 +65,72 @@ export default class Planet
         // Append Canvas
         this.$container.appendChild(this.renderer.domElement)
 
+        // Get canvas
+        this.$canvas = document.querySelector('canvas')
+
         /**
          * Events
          */
         window.addEventListener('resize', () => this.resize())
 
         /**
+         * Planet Props
+         */
+        this.kernelProps =
+        {
+            amount: 100000,
+            particleSize: 0.15,
+            color: 0xff2222,
+            radius: 20,
+            get: false
+        }
+        this.surfaceProps =
+        {
+          amount: 100000,
+          particleSize: 0.15,
+          color: 0xff7979,
+          radius: 50,
+          get: false
+        }
+        this.atmosphereProps =
+        {
+          amount: 10000,
+          particleSize: 0.15,
+          color: 0xf3eed9,
+          radius: 60,
+          get: false
+        }
+        this.sateliteProps =
+        {
+            amount: 1000,
+            particleSize: 0.05,
+            color: 0xffffff,
+            radius: 64,
+            get: true
+        }
+
+        /**
          * Animate
          */
-        this.createParticles(100000, 0.05 * 5, 0xff2222, 20)
-        this.createParticles(100000, 0.05 * 5, 0xff7979, 50)
-        this.createParticles(10000, 0.05 * 5, 0xF3EED9, 60)
+        this.createParticles(this.kernelProps.amount, this.kernelProps.particleSize, this.kernelProps.color, this.kernelProps.radius, this.kernelProps.get)
+        this.createParticles(this.surfaceProps.amount, this.surfaceProps.particleSize, this.surfaceProps.color, this.surfaceProps.radius, this.surfaceProps.get)
+        this.createParticles(this.atmosphereProps.amount, this.atmosphereProps.particleSize, this.atmosphereProps.color, this.atmosphereProps.radius, this.atmosphereProps.get)
+        this.satelite = this.createParticles(this.sateliteProps.amount, this.sateliteProps.particleSize, this.sateliteProps.color, this.sateliteProps.radius, this.sateliteProps.get)
+
         this.loop = this.loop.bind(this)
         this.loop()
     }
 
     resize()
     {
-        this.screen.width = this.$container.offsetWidth
-        this.screen.height = this.$container.offsetHeight
+        this.screen.width = window.innerWidth
+        this.screen.height = window.innerHeight
 
         // keep aspect ratio of camera
-        this.cameraProps.aspect = this.$container.offsetWidth / this.$container.offsetHeight
+        this.camera.aspect = this.screen.width / this.screen.height
         this.camera.updateProjectionMatrix()
-        
-        this.$canvas = document.querySelector('canvas')
-        this.$canvas.style.width = this.screen.width
-        this.$canvas.style.height = this.screen.height
+
+        this.renderer.setSize(this.screen.width / this.screen.height)
     }
 
     /**
@@ -97,7 +139,8 @@ export default class Planet
     initCamera()
     {
         this.camera.lookAt(this.cameraProps.target)
-        this.camera.position.set(4, 0, 4)
+        this.camera.position.set(0, 0, this.cameraProps.far)
+        this.camera.updateProjectionMatrix()
     }
 
     /**
@@ -119,7 +162,20 @@ export default class Planet
         return this.vector
     }
 
-    createParticles(_amount, _particleSize, _color, _radius)
+    // textureLoader()
+    // {
+    //     this.image = new Image()
+    //     this.image.src = '../assets/images/particle.png'
+    //     this.image.onload = () => {
+    //         this.texture = new THREE.Texture(this.image)
+    //         this.texture.needsUpdate = true
+    //         this.texture.minFilter = THREE.LinearFilter
+    //         console.log(this.texture)
+    //         return this.texture
+    //     }
+    // }
+
+    createParticles(_amount, _particleSize, _color, _radius, _isGet)
     {
         this.planet = new THREE.BufferGeometry()
         this.pos = []
@@ -132,20 +188,26 @@ export default class Planet
         this.planet.addAttribute('position', new THREE.Float32BufferAttribute(this.pos, 3))
 
         // Apply png texture to our particles
-        this.image = new Image()
-        this.image.addEventListener('load', () => 
-        {
-            this.texture = new THREE.Texture(this.image)
-            this.texture.needsUpdate = true
-            this.texture.minFilter = THREE.LinearFilter
-        })
-        this.image.src = '../assets/images/particle.png'
 
-        this.material = new THREE.PointsMaterial({ color: _color, size: _particleSize, map: this.texture, blending: THREE.AdditiveBlending })
+        this.material = new THREE.PointsMaterial(
+            {
+                color: _color,
+                size: _particleSize,
+                // map: this.texture,
+                blending: THREE.AdditiveBlending 
+            }
+        )
         this.material.depthTest = false
         this.particles = new THREE.Points(this.planet, this.material)
 
         this.scene.add(this.particles)
+        if(_isGet) {return this.particles}
+    }
+
+    rotateObject(_object, _xSpeed, _ySpeed)
+    {
+        _object.rotation.x += _xSpeed
+        _object.rotation.y += _ySpeed
     }
 
     /**
@@ -162,6 +224,7 @@ export default class Planet
         this.controler.minPolarAngle = this.controlerProps.angle.min
         this.controler.maxPolarAngle = this.controlerProps.angle.max
         this.controler.enableDamping = true
+        this.controler.enablePan = false
         this.dampingFactor = this.controlerProps.damping
     }
 
@@ -182,6 +245,7 @@ export default class Planet
     loop()
     {
         requestAnimationFrame(this.loop)
+        this.rotateObject(this.satelite, 0, -0.003)
         this.update()
         this.render()
     }
