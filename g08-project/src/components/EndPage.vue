@@ -1,5 +1,6 @@
 <template>
     <div class="end-page">
+        <acknowledgement></acknowledgement>
         <theme-result :data="populationThemes" info="Population"></theme-result>
         <div class="endGameText">
             <div class="titleEndPage"><strong>Your Result</strong></div>
@@ -19,12 +20,14 @@ import ThemeResult from './ThemeResult.vue'
 import Social from './Social.vue'
 import html2canvas from 'html2canvas'
 import saveAs from 'file-saver'
+import Acknowledgement from './Acknowledgement.vue'
 
 export default {
         name: 'end-page',
         components: {
             'theme-result': ThemeResult,
-            'social': Social
+            'social': Social,
+            'acknowledgement': Acknowledgement
         },
         methods: {
             genScreenshot() {
@@ -65,7 +68,7 @@ export default {
                     return 'When it comes to ecology, you can\'t say you\'re an expert, but you know what\'s good for your health and community life. You are making efforts to protect the planet, and that felt good through your choices.'
                 }
                 else {
-                    return 'bullshit profil'
+                    return 'You are a neutral profile, you perform a few eco-friendly gestures, a few good actions, which are almost like reflexes. That\'s a good start. Keep it up, you\'re on the right track!'
                 }
             }
         }
