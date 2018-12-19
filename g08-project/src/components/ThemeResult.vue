@@ -47,50 +47,26 @@
         top: 50%;
         transform: translateY(-50%);
         /* a modifier en responsive */
-        width: 200px;
+        width: 200px; 
         height: 500px;
     }
-    
-    .theme__result__title {
+
+.theme__result__title{
         position: absolute;
         top: 90%;
         left: 50%;
         transform: translateX(-50%);
     }
-    
-    .theme__result:first-child {
+
+.theme__result:first-child{
         left: 60px;
     }
-    
-    .theme__result:nth-child(3) {
+
+.theme__result:nth-child(3){
         right: 60px;
     }
-    
-    .result-tooltip::before {
-        content: 'The %  represents the success in this category. The clother you are to 100% the better it is.';
-        top: -5%;
-    }
-    
-    .tooltip::before {
-        position: absolute;
-        display: block;
-        background: rgba(0, 0, 0, 0.5);
-        font-size: 0.7rem;
-        padding: 10px;
-        transform: scale(0);
-        opacity: 0;
-        transition: 0.2s ease-out;
-        transform-origin: bottom left;
-        will-change: transform opacity;
-        color: white;
-    }
-    
-    .tooltip:hover::before {
-        opacity: 1;
-        transform: scale(1);
-    }
-    
-    .gauge__border {
+
+.gauge__border {
         border: 1px solid white;
         border-radius: 30px;
         padding: 2px;
@@ -99,12 +75,10 @@
         overflow: hidden;
         margin-bottom: 15px;
     }
-    
     .theme__result h4 {
         margin: 0 0 5px 0;
         font-size: 13px;
     }
-    
     .gauge {
         width: 100%;
         height: 100%;
@@ -116,9 +90,8 @@
         transition-duration: 0.3s;
         transition-timing-function: ease-out;
     }
-    
-    @media screen and (max-width: 960px) {
-        .theme__result {
+@media screen and (max-width: 960px) {
+        .theme__result{
             width: 30%;
             height: 55%;
             top: 40%;
@@ -127,16 +100,18 @@
         .theme__result h4 {
             font-size: 10px;
         }
-        .gauge__border {
+        .gauge__border{
             height: 5px;
         }
-        .theme__result:first-child {
+        .theme__result:first-child{
             left: 20px;
         }
-        .theme__result:nth-child(3) {
+
+        .theme__result:nth-child(3){
             right: 20px;
         }
-        .theme__result__title {
+
+        .theme__result__title{
             font-size: 0.8rem;
         }
     }
