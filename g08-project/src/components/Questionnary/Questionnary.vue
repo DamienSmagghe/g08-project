@@ -50,9 +50,9 @@
         },
         computed: {
             era() {
-                if (this.questionId < 25) {
+                if (this.questionId < 8) {
                     return 1
-                } else if (this.questionId >= 25 && this.questionId < 50) {
+                } else if (this.questionId >= 8 && this.questionId < 16) {
                     return 2
                 } else {
                     return 3
@@ -88,6 +88,7 @@
         font-family: 'Fjalla', 'helvetica', sans-serif;
         font-size: 3rem;
         letter-spacing: 1rem;
+        z-index: 20;
     }
     
     .game {
