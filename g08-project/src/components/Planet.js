@@ -113,13 +113,18 @@ export default class Planet
             name: 'satelite'
         }
 
-        /**
-         * Animate
-         */
         this.kernel = this.createParticles(this.kernelProps)
         this.surface = this.createParticles(this.surfaceProps)
         this.atmosphere = this.createParticles(this.atmosphereProps)
         this.satelite = this.createParticles(this.sateliteProps)
+
+        /**
+         * Animate
+         */
+        this.kernelAnimation = this.changeColor(this.kernel, 'hsl(12, 82%, 50%)')
+        this.surfaceAnimation = this.changeColor(this.surface, 'hsl(200, 100%, 50%)')
+        this.atmosphereAnimation = this.changeColor(this.atmosphere, 'hsl(215, 20%, 57%)')
+        this.sateliteAnimation = this.changeColor(this.satelite, 'hsl(214, 14%, 51%)')
 
         this.loop = this.loop.bind(this)
         this.loop()
@@ -214,6 +219,12 @@ export default class Planet
         _object.rotation.y += _ySpeed
     }
 
+    changeColor(_object, _color)
+    {
+        this.color = new THREE.Color(_color)
+        _object.material.color = this.color
+    }
+
     /**
      * Controler
      */
@@ -249,7 +260,7 @@ export default class Planet
     loop()
     {
         requestAnimationFrame(this.loop)
-        // this.rotateObject(this.satelite, 0, -0.003)
+        this.rotateObject(this.satelite, 0, -0.003)
         this.update()
         this.render()
     }
