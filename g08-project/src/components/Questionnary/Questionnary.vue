@@ -79,7 +79,6 @@
 
 <style>
     .planet-name {
-        /* width: 20%; */
         position: absolute;
         top: 0;
         left: 50%;
@@ -88,6 +87,7 @@
         font-family: 'Fjalla', 'helvetica', sans-serif;
         font-size: 3rem;
         letter-spacing: 1rem;
+        z-index: 10;
     }
     
     .game {
