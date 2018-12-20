@@ -70,7 +70,7 @@
                     if (this.chapter <= 4) {
                         window.setTimeout(() => {
                             this.justChanged = false
-                        }, 200)
+                        }, 600)
                     }
                 }
                 if (distance > 30 && this.justChanged === false && this.chapter > 1 && this.chapter < 4) {
@@ -79,7 +79,7 @@
                     if (this.chapter <= 4) {
                         window.setTimeout(() => {
                             this.justChanged = false
-                        }, 200)
+                        }, 600)
                     }
                 }
             },
@@ -95,7 +95,7 @@
                     if (this.chapter <= 4) {
                         window.setTimeout(() => {
                             this.justChanged = false
-                        }, 200)
+                        }, 600)
                     }
                 }
             }

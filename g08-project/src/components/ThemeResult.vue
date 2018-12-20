@@ -1,6 +1,6 @@
 <template>
     <div class="theme__result cornered">
-        <div v-for="theme in data" class="gauge__content">
+        <div :key="theme" v-for="theme in data" class="gauge__content">
             <div class="gauge__info tooltip result-tooltip">
                 <h4>
                     <font-awesome-icon icon="question-circle" /> {{theme.name + ' : ' + Math.floor((theme.value - 0.5) * 100) + '%'}}

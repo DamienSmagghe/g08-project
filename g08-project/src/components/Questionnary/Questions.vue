@@ -1,8 +1,8 @@
 <template>
     <div class="questions cornered">
-        <div class="question" v-for="q in questionsAll" v-if="q.id === questId">
+        <div class="question" :key="q.id" v-for="q in questionsAll" v-if="q.id === questId">
             <h4 v-html="q.text"></h4>
-            <div class="answer" v-for="answer in q.answers">
+            <div class="answer" :key="answer" v-for="answer in q.answers">
                 <button v-bind:class="{current: answer.effects === effect}" @click="storeEffects(answer.effects)">
                     <font-awesome-icon :icon="answer.icon"/> <div class="answer__content" v-html="answer.text"></div>
                 </button>

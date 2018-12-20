@@ -85,54 +85,31 @@
             },
             updatePlanet(){
                 // this.kernelAnimation = this.changeColor(this.kernel, 'hsl(12, 82%, 50%)')
-                planet.planet.kernelAnimation = planet.planet.changeColor(planet.planet.kernel, new THREE.Color().setHSL(0.12, 0.82, (earthViability.value * 30)/ 100))
-                planet.planet.surfaceAnimation = planet.planet.changeColor(planet.planet.surface,new THREE.Color().setHSL(2, 1, (populationViability.value * 30)/ 100))
-                planet.planet.atmosphereAnimation = planet.planet.changeColor(planet.planet.atmosphere, new THREE.Color().setHSL(2.15, 0.82, (earthViability.value * 30)/ 100))
-                planet.planet.sateliteAnimation = planet.planet.changeColor(planet.planet.satelite, new THREE.Color().setHSL(2.14, 0.14, (populationViability.value * 30)/ 100))
-                // planet.planet.kernelAnimation = planet.planet.changeColor(planet.planet.kernel, `0x${}`)
+                planet.planet.kernelAnimation = planet.planet.changeColor(
+                    planet.planet.kernel,
+                    new THREE.Color().setHSL(
+                        (earthViability.value + 0.04) * 80 / 250, //20 to 80 --> 0.08 to 0.36
+                        0.88, // 80 to 100 --> 0.32 to 0.4
+                        0.35 // keep 0.5
+                    )
+                )
+                planet.planet.surfaceAnimation = planet.planet.changeColor(
+                    planet.planet.surface,
+                    new THREE.Color().setHSL(
+                        (populationViability.value + 0.08) * 100 / 100,
+                        0.7,
+                        0.44
+                    )
+                )
+                planet.planet.atmosphereAnimation = planet.planet.changeColor(
+                    planet.planet.atmosphere,
+                    new THREE.Color().setHSL(
+                        (earthViability.value + 0.5) * 100 / 100, //20 to 90 --> 0.08 to 0.36
+                        1,
+                        0.84
+                    )
+                )
             }
-            // updatePlanet() {
-            //     planet.planet.scene.remove(planet.planet.scene.getObjectByName(planet.planet.kernel.name))
-            //     planet.planet.scene.remove(planet.planet.scene.getObjectByName(planet.planet.surface.name))
-            //     planet.planet.scene.remove(planet.planet.scene.getObjectByName(planet.planet.atmosphere.name))
-            //     planet.planet.scene.remove(planet.planet.scene.getObjectByName(planet.planet.satelite.name))
-    
-            //     planet.planet.kernel = planet.planet.createParticles({
-            //         amount: 100000,
-            //         particleSize: 0.15,
-            //         color: 0xff0000,
-            //         radius: 20,
-            //         name: 'kernel'
-            //     })
-            //     planet.planet.surface = planet.planet.createParticles({
-            //         amount: 100000,
-            //         particleSize: 0.15,
-            //         color: 0xD4E1FE, //
-            //         radius: 50,
-            //         get: false,
-            //         name: 'surface'
-            //     })
-            //     planet.planet.atmosphere = planet.planet.createParticles({
-            //         amount: 5000,
-            //         particleSize: 0.15,
-            //         color: 0xf3eed9, //
-            //         radius: 60,
-            //         get: false,
-            //         name: 'atmosphere'
-            //     })
-            //     planet.planet.satelite = planet.planet.createParticles({
-            //         amount: 1000,
-            //         particleSize: 0.05,
-            //         color: 0xffffff,
-            //         radius: 64,
-            //         name: 'satelite'
-            //     })
-    
-            //     planet.planet.scene.add(planet.planet.kernel)
-            //     planet.planet.scene.add(planet.planet.surface)
-            //     planet.planet.scene.add(planet.planet.atmosphere)
-            //     planet.planet.scene.add(planet.planet.satelite)
-            // }
         }
     }
 </script>

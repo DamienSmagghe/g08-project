@@ -105,7 +105,7 @@ export default class Planet
         }
         this.sateliteProps =
         {
-            amount: 1000,
+            amount: 500,
             particleSize: 0.05,
             color: 0xffffff,
             radius: 64,
@@ -123,8 +123,8 @@ export default class Planet
          */
         this.kernelAnimation = this.changeColor(this.kernel, 'hsl(12, 82%, 50%)')
         this.surfaceAnimation = this.changeColor(this.surface, 'hsl(200, 100%, 50%)')
-        this.atmosphereAnimation = this.changeColor(this.atmosphere, 'hsl(215, 20%, 57%)')
-        this.sateliteAnimation = this.changeColor(this.satelite, 'hsl(214, 14%, 51%)')
+        this.atmosphereAnimation = this.changeColor(this.atmosphere, 'hsl(210, 100%, 80%)')
+        this.sateliteAnimation = this.changeColor(this.satelite, 'hsl(210, 100%, 100%)')
 
         this.loop = this.loop.bind(this)
         this.loop()
